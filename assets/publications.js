@@ -1,11 +1,9 @@
-// assets/publications.js
-
-// Load and render papers using markdown-it with footnote support
+// Load and render papers using markdown-it with KaTeX, footnotes, and dynamic images
 document.addEventListener("DOMContentLoaded", async () => {
   const USER_NAME = "HectorMozo3110";
   const papersContainer = document.getElementById("papers");
 
-  // Initialize markdown-it with footnote and HTML support
+  // Initialize markdown-it with footnotes and HTML support
   const md = window.markdownit({
     html: true,
     linkify: true,
@@ -19,8 +17,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     for (const repo of repos) {
       const repoName = repo.name;
-
-      // Attempt to fetch the paper.md file from the /paper/ directory
       const paperUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/paper.md`;
 
       try {
@@ -29,12 +25,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         let markdownText = await paperRes.text();
 
-        // Rewrite relative image paths to absolute GitHub URLs
+        // Replace relative image paths with full GitHub URLs and apply image width if defined
         markdownText = markdownText.replace(
-          /!\[([^\]]*)\]\(([^)]+)\)/g,
-          (match, alt, src) => {
+          /!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,
+          (match, alt, src, attrs) => {
             const fullUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/${src}`;
-            return `![${alt}](${fullUrl})`;
+            let style = '';
+            if (attrs && attrs.includes("width=")) {
+              const width = attrs.match(/width=([0-9]+%?)/)?.[1];
+              if (width) {
+                style = ` style="max-width:${width}; height:auto;"`;
+              }
+            }
+            return `<img alt="${alt}" src="${fullUrl}"${style} />`;
           }
         );
 
@@ -48,10 +51,23 @@ document.addEventListener("DOMContentLoaded", async () => {
           <div class="paper-content">
             ${htmlContent}
           </div>
+          <p>
+            <a class="read-more-link" href="/test_main/papers/viewer.html?repo=${repoName}">
+              Read Full Paper →
+            </a>
+          </p>
           <hr/>
         `;
 
         papersContainer.appendChild(card);
+
+        // Trigger KaTeX rendering for math formulas
+        renderMathInElement(card, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false }
+          ]
+        });
       } catch (err) {
         console.warn(`Could not fetch paper for ${repoName}:`, err);
       }

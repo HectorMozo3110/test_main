@@ -1,0 +1,62 @@
+---
+layout: default
+title: Paper Viewer
+paper_viewer: true
+---
+
+<div id="paper-page" class="paper-content">
+  <p>Loading paper...</p>
+</div>
+
+<script>
+  // Extract the repository name from the URL path
+  const repoName = window.location.pathname.split('/').filter(p => p)[2];
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const USER_NAME = "HectorMozo3110";
+    const container = document.getElementById("paper-page");
+
+    // Initialize markdown-it
+    const md = window.markdownit({
+      html: true,
+      linkify: true,
+      typographer: true
+    }).use(window.markdownitFootnote);
+
+    const paperUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/paper.md`;
+
+    try {
+      let markdownText = await fetch(paperUrl).then(res => res.text());
+
+      // Convert relative image paths to GitHub raw URLs and apply width if specified
+      markdownText = markdownText.replace(
+        /!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,
+        (match, alt, src, attrs) => {
+          const fullUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/${src}`;
+          let style = '';
+          if (attrs && attrs.includes("width=")) {
+            const width = attrs.match(/width=([0-9]+%?)/)?.[1];
+            if (width) {
+              style = ` style="max-width:${width}; height:auto;"`;
+            }
+          }
+          return `<img alt="${alt}" src="${fullUrl}"${style} />`;
+        }
+      );
+
+      const htmlContent = md.render(markdownText);
+      container.innerHTML = htmlContent;
+
+      // Render KaTeX math formulas
+      renderMathInElement(container, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false }
+        ]
+      });
+
+    } catch (err) {
+      container.innerHTML = "<p>❌ Error loading paper. Please check the repository or try again later.</p>";
+    }
+  });
+</script>
