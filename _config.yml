@@ -1,20 +1,25 @@
 title: Neureonmindflux Research Lab
 description: Official research site for advanced AI, quantum security, and post-quantum publications
 
+# No need to set baseurl or url, handled via JSON
 baseurl: ""
 url: ""
 
+# Markdown engine and theme
 markdown: kramdown
 theme: minima
 
+# Ensure assets and papers folders are included in the build
 include:
   - assets
   - papers
 
+# Allow custom pages if needed
 collections:
   pages:
     output: true
 
+# Default layout for pages
 defaults:
   - scope:
       path: ""
@@ -22,5 +27,6 @@ defaults:
     values:
       layout: default
 
+# Optional Jekyll flags
 safe: true
 future: true

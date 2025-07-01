@@ -2,12 +2,12 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const papersContainer = document.getElementById("papers");
 
-  // Load GitHub username and base path from external settings.json
+  // Load GitHub username and base path from external JSON configuration
   const config = await fetch("/assets/settings.json").then(res => res.json());
   const USER_NAME = config.github_username;
-  const BASE_PATH = config.base_path || "";  // Optional
+  const BASE_PATH = config.base_path || "";  // Optional if site is root-based
 
-  // Initialize markdown-it with footnotes and HTML support
+  // Initialize markdown-it with footnotes and HTML rendering enabled
   const md = window.markdownit({
     html: true,
     linkify: true,
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }).use(window.markdownitFootnote);
 
   try {
-    // Fetch all public repositories from the GitHub user
+    // Get all public repositories from GitHub user
     const repoResponse = await fetch(`https://api.github.com/users/${USER_NAME}/repos`);
     const repos = await repoResponse.json();
 
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         let markdownText = await paperRes.text();
 
-        // Replace relative image paths with full GitHub URLs and apply image width if defined
+        // Replace relative image links with full GitHub raw URLs
         markdownText = markdownText.replace(
           /!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,
           (match, alt, src, attrs) => {
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const htmlContent = md.render(markdownText);
 
-        // Create a container card for the paper
+        // Create a visual card for each paper
         const card = document.createElement("div");
         card.classList.add("paper-card");
         card.innerHTML = `
@@ -65,15 +65,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         papersContainer.appendChild(card);
 
-        // Trigger KaTeX rendering for math formulas
+        // Render math formulas with KaTeX
         renderMathInElement(card, {
           delimiters: [
             { left: "$$", right: "$$", display: true },
             { left: "$", right: "$", display: false }
           ]
         });
+
       } catch (err) {
-        console.warn(`Could not fetch paper for ${repoName}:`, err);
+        console.warn(`Could not load paper from ${repoName}:`, err);
       }
     }
   } catch (err) {

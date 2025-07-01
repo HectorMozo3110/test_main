@@ -13,6 +13,7 @@ paper_viewer: true
   <ul class="bibtex-rendered"></ul>
 </div>
 
+<!-- Template for BibTeX rendering -->
 <template class="bibtex_template">
   <li>
     <span class="if author">{{author}}</span>,
@@ -24,7 +25,7 @@ paper_viewer: true
   </li>
 </template>
 
-<!-- External dependencies -->
+<!-- External libraries -->
 <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/markdown-it-footnote@3.0.3/dist/markdown-it-footnote.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/ORCID/bibtex-js@1.0.0/bibtex.min.js"></script>
@@ -33,27 +34,31 @@ paper_viewer: true
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" />
 
 <script>
+  // Get the repository name from query string
   const repoName = new URLSearchParams(window.location.search).get("repo");
 
   document.addEventListener("DOMContentLoaded", async () => {
     const container = document.getElementById("paper-page");
 
-    // Load config with explicit root path
+    // Load static configuration from JSON file
     const config = await fetch("/assets/settings.json").then(res => res.json());
     const USER_NAME = config.github_username;
+    const BASE_PATH = config.base_path || "";
 
+    // Initialize markdown-it with footnotes
     const md = window.markdownit({
       html: true,
       linkify: true,
       typographer: true
     }).use(window.markdownitFootnote);
 
+    // Construct raw GitHub URL to load paper.md
     const paperUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/paper.md`;
 
     try {
       let markdownText = await fetch(paperUrl).then(res => res.text());
 
-      // Transform image links to full GitHub raw URLs
+      // Convert image paths and apply optional width
       markdownText = markdownText.replace(
         /!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,
         (match, alt, src, attrs) => {
@@ -69,9 +74,11 @@ paper_viewer: true
         }
       );
 
+      // Render markdown to HTML
       const htmlContent = md.render(markdownText);
       container.innerHTML = htmlContent;
 
+      // Render math with KaTeX
       renderMathInElement(container, {
         delimiters: [
           { left: "$$", right: "$$", display: true },
@@ -83,6 +90,7 @@ paper_viewer: true
       container.innerHTML = "<p>❌ Error loading paper.md</p>";
     }
 
+    // Attempt to load BibTeX references
     const bibNames = ["references.bib", "paper.bib", "citations.bib"];
     for (let bibName of bibNames) {
       const bibUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/${bibName}`;
