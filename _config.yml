@@ -2,8 +2,8 @@ title: Neureonmindflux Research Lab
 description: Official research site for advanced AI, quantum security, and post-quantum publications
 
 
-baseurl: ""
-url: ""
+baseurl: "/test_main"
+url: "https://hectormozo3110.github.io"
 
 markdown: kramdown
 theme: minima
