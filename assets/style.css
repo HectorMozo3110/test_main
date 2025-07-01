@@ -49,7 +49,24 @@ h1 {
   margin-top: 15px;
 }
 
-/* Responsive text sizes */
+/* PDF export button */
+.paper-card button {
+  margin-top: 15px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 0.95em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.paper-card button:hover {
+  background-color: #005a99;
+}
+
+/* Responsive design */
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 1.8em;
@@ -61,5 +78,23 @@ h1 {
 
   .paper-card h2 {
     font-size: 1.5em;
+  }
+}
+
+/* PDF formatting: remove hover effects and shadows in print */
+@media print {
+  .paper-card {
+    box-shadow: none !important;
+    transform: none !important;
+    page-break-inside: avoid;
+  }
+
+  button {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
   }
 }

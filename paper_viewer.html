@@ -5,13 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neureonmindflux Lab - Publications</title>
 
-  <!-- Load marked.js to parse Markdown in browser -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Load markdown-it and its plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it-footnote@3.0.3/dist/markdown-it-footnote.min.js"></script>
+
+  <!-- Load html2pdf for PDF export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
   <!-- Load your script -->
   <script src="assets/publications.js" defer></script>
 
-  <!-- Optional: Link your style.css if you have one -->
+  <!-- Optional: Link your style.css -->
   <link rel="stylesheet" href="assets/style.css">
 
   <style>
@@ -21,11 +25,13 @@
       background: #f5f7fa;
       color: #222;
     }
+
     h1 {
       text-align: center;
       font-size: 2.4em;
       margin-bottom: 30px;
     }
+
     .paper-card {
       background: white;
       padding: 20px;
@@ -33,15 +39,33 @@
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
     .paper-card h2 {
       margin-top: 0;
       color: #0077cc;
     }
+
     .paper-content {
       margin-top: 10px;
     }
+
+    .paper-card button {
+      margin-top: 15px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      font-size: 0.95em;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .paper-card button:hover {
+      background-color: #005fa3;
+    }
+
     hr {
-      margin-top: 20px;
+      margin-top: 30px;
     }
   </style>
 </head>

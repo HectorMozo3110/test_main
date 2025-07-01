@@ -1,19 +1,19 @@
 title: Neureonmindflux Research Lab
 description: Official research site for advanced AI, quantum security, and post-quantum publications
 
-# URL base para GitHub Pages con repositorio personal
-baseurl: "/test_main"   # <- nombre exacto del repositorio
+# Base URL for GitHub Pages (repository name if not using custom domain)
+baseurl: "/test_main"
 url: "https://hectormozo3110.github.io"
 
-# Motor de Markdown y tema
+# Markdown processor and theme
 markdown: kramdown
 theme: minima
 
-# Incluir archivos que Jekyll ignora por defecto
+# Include specific files/folders ignored by default
 include:
   - assets
   - paper_viewer.html
 
-# Seguridad y opciones adicionales
+# Enable safe mode and future content support
 safe: true
 future: true
