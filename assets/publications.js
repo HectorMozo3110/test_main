@@ -1,7 +1,14 @@
 // Load and render papers using markdown-it with KaTeX, footnotes, and dynamic images
 document.addEventListener("DOMContentLoaded", async () => {
-  const USER_NAME = "HectorMozo3110";
   const papersContainer = document.getElementById("papers");
+
+  // Dynamically compute base path from current URL
+  const BASE_PATH = window.location.pathname.split("/").slice(0, 2).join("");
+  const configPath = `${BASE_PATH}/assets/settings.json`;
+
+  // Load GitHub username from external settings.json
+  const config = await fetch(configPath).then(res => res.json());
+  const USER_NAME = config.github_username;
 
   // Initialize markdown-it with footnotes and HTML support
   const md = window.markdownit({
@@ -52,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             ${htmlContent}
           </div>
           <p>
-            <a class="read-more-link" href="/test_main/papers/viewer.html?repo=${repoName}">
+            <a class="read-more-link" href="${BASE_PATH}/papers/viewer.html?repo=${repoName}">
               Read Full Paper →
             </a>
           </p>
