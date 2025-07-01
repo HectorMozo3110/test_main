@@ -1,6 +1,7 @@
 ---
 layout: default
-title: About the Lab
+title: About the Lab\
+permalink: /about
 ---
 
 # 🧬 About Neureonmindflux Research Lab

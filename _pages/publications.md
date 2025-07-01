@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Publications
+permalink: /publications
 paper_viewer: true
 ---
 
