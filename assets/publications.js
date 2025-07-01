@@ -27,7 +27,17 @@ document.addEventListener("DOMContentLoaded", async () => {
         const paperRes = await fetch(paperUrl);
         if (!paperRes.ok) continue;
 
-        const markdownText = await paperRes.text();
+        let markdownText = await paperRes.text();
+
+        // Rewrite relative image paths to absolute GitHub URLs
+        markdownText = markdownText.replace(
+          /!\[([^\]]*)\]\(([^)]+)\)/g,
+          (match, alt, src) => {
+            const fullUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/${src}`;
+            return `![${alt}](${fullUrl})`;
+          }
+        );
+
         const htmlContent = md.render(markdownText);
 
         // Create a container card for the paper
@@ -35,10 +45,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         card.classList.add("paper-card");
         card.innerHTML = `
           <h2>${repoName}</h2>
-          <div class="paper-content" id="paper-${repoName}">
+          <div class="paper-content">
             ${htmlContent}
           </div>
-          <button onclick="downloadPDF('paper-${repoName}', '${repoName}')">📄 Export as PDF</button>
           <hr/>
         `;
 
@@ -52,16 +61,3 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error(err);
   }
 });
-
-// Generate a PDF from the specified paper section using html2pdf.js
-function downloadPDF(elementId, title) {
-  const element = document.getElementById(elementId);
-  const opt = {
-    margin:       0.5,
-    filename:     `${title}.pdf`,
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 2 },
-    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-  };
-  html2pdf().set(opt).from(element).save();
-}
