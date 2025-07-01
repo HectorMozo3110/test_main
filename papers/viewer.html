@@ -93,10 +93,15 @@ paper_viewer: true
         script.text = bibText;
         document.body.appendChild(script);
 
-        setTimeout(() => {
-          const bib = new Bibtex();
-          bib.render();
-        }, 300);
+        // Wait until script is in DOM, then render safely
+        const waitForBib = setInterval(() => {
+          const bibNode = document.querySelector("script[type='text/bibtex']");
+          if (bibNode) {
+            clearInterval(waitForBib);
+            new Bibtex().render();
+          }
+        }, 200);
+
         break;
       } catch (err) {
         console.warn("No .bib loaded:", err);
