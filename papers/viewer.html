@@ -13,7 +13,6 @@ paper_viewer: true
   <ul class="bibtex-rendered"></ul>
 </div>
 
-
 <template class="bibtex_template">
   <li>
     <span class="if author">{{author}}</span>,
@@ -25,7 +24,7 @@ paper_viewer: true
   </li>
 </template>
 
-
+<!-- External dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/markdown-it-footnote@3.0.3/dist/markdown-it-footnote.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/ORCID/bibtex-js@1.0.0/bibtex.min.js"></script>
@@ -33,22 +32,15 @@ paper_viewer: true
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" />
 
-
 <script>
-
   const repoName = new URLSearchParams(window.location.search).get("repo");
 
   document.addEventListener("DOMContentLoaded", async () => {
     const container = document.getElementById("paper-page");
 
-    // Correct dynamic base path for GitHub Pages
-    const BASE_PATH = "/" + window.location.pathname.split("/")[1];
-    const configPath = `${BASE_PATH}/assets/settings.json`;
-
-    // Load external GitHub username config
-    const config = await fetch(configPath).then(res => res.json());
+    // Load config with explicit root path
+    const config = await fetch("/assets/settings.json").then(res => res.json());
     const USER_NAME = config.github_username;
-
 
     const md = window.markdownit({
       html: true,
@@ -61,7 +53,7 @@ paper_viewer: true
     try {
       let markdownText = await fetch(paperUrl).then(res => res.text());
 
-
+      // Transform image links to full GitHub raw URLs
       markdownText = markdownText.replace(
         /!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,
         (match, alt, src, attrs) => {
@@ -77,10 +69,8 @@ paper_viewer: true
         }
       );
 
-
       const htmlContent = md.render(markdownText);
       container.innerHTML = htmlContent;
-
 
       renderMathInElement(container, {
         delimiters: [
@@ -92,7 +82,6 @@ paper_viewer: true
     } catch (err) {
       container.innerHTML = "<p>❌ Error loading paper.md</p>";
     }
-
 
     const bibNames = ["references.bib", "paper.bib", "citations.bib"];
     for (let bibName of bibNames) {
@@ -106,7 +95,6 @@ paper_viewer: true
         script.type = "text/bibtex";
         script.text = bibText;
         document.body.appendChild(script);
-
 
         const waitForBib = setInterval(() => {
           const bibNode = document.querySelector("script[type='text/bibtex']");

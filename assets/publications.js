@@ -2,13 +2,10 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const papersContainer = document.getElementById("papers");
 
-  // Dynamically compute base path from current URL
-  const BASE_PATH = window.location.pathname.split("/").slice(0, 2).join("");
-  const configPath = `${BASE_PATH}/assets/settings.json`;
-
-  // Load GitHub username from external settings.json
-  const config = await fetch(configPath).then(res => res.json());
+  // Load GitHub username and base path from external settings.json
+  const config = await fetch("/assets/settings.json").then(res => res.json());
   const USER_NAME = config.github_username;
+  const BASE_PATH = config.base_path || "";  // Optional
 
   // Initialize markdown-it with footnotes and HTML support
   const md = window.markdownit({
