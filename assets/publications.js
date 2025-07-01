@@ -1,13 +1,9 @@
 // Load and render papers using markdown-it with KaTeX, footnotes, and dynamic images
 document.addEventListener("DOMContentLoaded", async () => {
+  const USER_NAME = "HectorMozo3110";
   const papersContainer = document.getElementById("papers");
 
-  // Load GitHub username and base path from external JSON configuration
-  const config = await fetch("/assets/settings.json").then(res => res.json());
-  const USER_NAME = config.github_username;
-  const BASE_PATH = config.base_path || "";  // Optional if site is root-based
-
-  // Initialize markdown-it with footnotes and HTML rendering enabled
+  // Initialize markdown-it with footnotes and HTML support
   const md = window.markdownit({
     html: true,
     linkify: true,
@@ -15,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }).use(window.markdownitFootnote);
 
   try {
-    // Get all public repositories from GitHub user
+    // Fetch all public repositories from the GitHub user
     const repoResponse = await fetch(`https://api.github.com/users/${USER_NAME}/repos`);
     const repos = await repoResponse.json();
 
@@ -29,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         let markdownText = await paperRes.text();
 
-        // Replace relative image links with full GitHub raw URLs
+        // Replace relative image paths with full GitHub URLs and apply image width if defined
         markdownText = markdownText.replace(
           /!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,
           (match, alt, src, attrs) => {
@@ -47,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const htmlContent = md.render(markdownText);
 
-        // Create a visual card for each paper
+        // Create a container card for the paper
         const card = document.createElement("div");
         card.classList.add("paper-card");
         card.innerHTML = `
@@ -56,7 +52,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             ${htmlContent}
           </div>
           <p>
-            <a class="read-more-link" href="${BASE_PATH}/papers/viewer.html?repo=${repoName}">
+            <a class="read-more-link" href="/test_main/papers/viewer.html?repo=${repoName}">
               Read Full Paper →
             </a>
           </p>
@@ -65,16 +61,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         papersContainer.appendChild(card);
 
-        // Render math formulas with KaTeX
+        // Trigger KaTeX rendering for math formulas
         renderMathInElement(card, {
           delimiters: [
             { left: "$$", right: "$$", display: true },
             { left: "$", right: "$", display: false }
           ]
         });
-
       } catch (err) {
-        console.warn(`Could not load paper from ${repoName}:`, err);
+        console.warn(`Could not fetch paper for ${repoName}:`, err);
       }
     }
   } catch (err) {
