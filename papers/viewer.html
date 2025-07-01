@@ -10,12 +10,28 @@ paper_viewer: true
 
 <div id="bibtex-cite" style="margin-top: 40px;">
   <h2>📚 References</h2>
-  <div class="bibtex-rendered"></div>
+  <ul class="bibtex-rendered"></ul>
 </div>
 
+<!-- BibTeX template -->
+<template class="bibtex_template">
+  <li>
+    <span class="if author">{{author}}</span>,
+    <span class="if title"><i>"{{title}}"</i></span>,
+    <span class="if journal">{{journal}}</span>
+    <span class="if booktitle">{{booktitle}}</span>
+    <span class="if publisher">{{publisher}}</span>,
+    <span class="if year">{{year}}</span>.
+  </li>
+</template>
+
+<!-- Load dependencies -->
 <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/markdown-it-footnote@3.0.3/dist/markdown-it-footnote.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js/bibtex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" />
 
 <script>
   const repoName = new URLSearchParams(window.location.search).get("repo");
@@ -35,7 +51,6 @@ paper_viewer: true
     try {
       let markdownText = await fetch(paperUrl).then(res => res.text());
 
-      // Handle custom image sizes
       markdownText = markdownText.replace(
         /!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,
         (match, alt, src, attrs) => {
@@ -54,7 +69,6 @@ paper_viewer: true
       const htmlContent = md.render(markdownText);
       container.innerHTML = htmlContent;
 
-      // Render math
       renderMathInElement(container, {
         delimiters: [
           { left: "$$", right: "$$", display: true },
@@ -66,7 +80,6 @@ paper_viewer: true
       container.innerHTML = "<p>❌ Error loading paper.md</p>";
     }
 
-    // Try to load .bib file
     const bibNames = ["references.bib", "paper.bib", "citations.bib"];
     for (let bibName of bibNames) {
       const bibUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/${bibName}`;
@@ -80,12 +93,11 @@ paper_viewer: true
         script.text = bibText;
         document.body.appendChild(script);
 
-        // Trigger bibtex-js render
         setTimeout(() => {
           const bib = new Bibtex();
           bib.render();
         }, 300);
-        break; // Stop at first successful bib found
+        break;
       } catch (err) {
         console.warn("No .bib loaded:", err);
       }
