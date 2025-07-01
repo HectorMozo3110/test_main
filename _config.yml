@@ -2,8 +2,8 @@ title: Neureonmindflux Research Lab
 description: Official research site for advanced AI, quantum security, and post-quantum publications
 
 # No need to set baseurl or url, handled via JSON
-baseurl: ""
-url: ""
+baseurl: "/main_test"
+url: "https://hectormozo3110.github.io"
 
 # Markdown engine and theme
 markdown: kramdown
