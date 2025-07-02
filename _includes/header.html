@@ -1,7 +1,7 @@
 <header>
   <div class="header-container split-header">
 
-    <!-- Branding + Logo -->
+    <!-- Branding section: logo and name -->
     <div class="lab-brand">
       <div class="lab-logo">
         <img src="{{ '/assets/images/logo_lab.png' | relative_url }}" alt="Lab Logo" />
@@ -12,12 +12,17 @@
       </div>
     </div>
 
-    <!-- Centered Text -->
-    <div class="lab-centered-text">
-      <p>Browse our open research projects on GitHub and Zenodo</p>
+    <!-- Icon section (centered visually between brand and navigation) -->
+    <div class="lab-centered-icons">
+      <a href="https://github.com/Neureonmindflux-Research-Lab" target="_blank" title="GitHub">
+        <img src="{{ '/assets/images/github_icon.png' | relative_url }}" alt="GitHub" />
+      </a>
+      <a href="https://zenodo.org/search?q=Neureonmindflux" target="_blank" title="Zenodo">
+        <img src="{{ '/assets/images/zenodo_icon.png' | relative_url }}" alt="Zenodo" />
+      </a>
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation links -->
     <nav class="main-nav">
       <ul class="nav-links">
         <li><a href="{{ '/' | relative_url }}">Home</a></li>
@@ -26,14 +31,5 @@
       </ul>
     </nav>
   </div>
-
- 
-  <div class="lab-links-icons">
-    <a href="https://github.com/Neureonmindflux-Research-Lab" target="_blank" title="View on GitHub">
-      <img src="{{ '/assets/images/github_icon.png' | relative_url }}" alt="GitHub" />
-    </a>
-    <a href="https://zenodo.org/search?q=Neureonmindflux" target="_blank" title="View on Zenodo">
-      <img src="{{ '/assets/images/zenodo_icon.png' | relative_url }}" alt="Zenodo" />
-    </a>
-  </div>
+  
 </header>

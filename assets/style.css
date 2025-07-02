@@ -14,7 +14,7 @@ header {
   border-bottom: 1px solid #ddd;
   padding: 0;
   margin-bottom: 30px;
-  height: auto; 
+  height: auto;
   overflow: hidden;
   display: block;
 }
@@ -92,35 +92,22 @@ header {
   text-decoration: underline;
 }
 
-/* Centered text between brand and nav */
-.lab-centered-text {
-  flex: 1;
-  text-align: center;
-}
-
-.lab-centered-text p {
-  font-size: 0.95em;
-  font-style: italic;
-  color: #333;
-  margin: 8px 0;
-}
-
-/* GitHub + Zenodo icons centered below */
-.lab-links-icons {
+/* GitHub + Zenodo icons centered visually */
+.lab-centered-icons {
   display: flex;
   justify-content: center;
-  gap: 22px;
-  margin-top: 6px;
-  padding-bottom: 14px;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
 }
 
-.lab-links-icons img {
-  height: 28px;
+.lab-centered-icons img {
+  height: 22px;
   width: auto;
   transition: transform 0.2s ease;
 }
 
-.lab-links-icons img:hover {
+.lab-centered-icons img:hover {
   transform: scale(1.1);
 }
 
@@ -186,7 +173,7 @@ footer {
   margin: 20px auto;
 }
 
-/* Responsive */
+/* Responsive layout */
 @media screen and (max-width: 600px) {
   header h1 {
     font-size: 1.6em;
@@ -205,16 +192,16 @@ footer {
     gap: 10px;
   }
 
-  .lab-links-icons {
+  .lab-centered-icons {
     flex-direction: column;
   }
 
-  .lab-links-icons img {
-    height: 30px;
+  .lab-centered-icons img {
+    height: 28px;
   }
 }
 
-/* Layout container */
+/* Header wrapper layout */
 .split-header {
   display: flex;
   justify-content: space-between;
