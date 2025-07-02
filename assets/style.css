@@ -12,19 +12,26 @@ body {
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
-  padding: 20px 0;
+  padding: 0;                   
   margin-bottom: 30px;
+  height: 100px;                
+  overflow: hidden;             
+  display: flex;
+  align-items: center;
 }
+
 
 .header-container {
-  display: flex;                    /* Split header in two columns */
-  justify-content: space-between;  /* One side left, one right */
-  align-items: center;             /* Align vertically */
-  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;              
   max-width: 960px;
+  width: 100%;
   margin: 0 auto;
-
+  height: 100%;              
 }
+
 
 header h1 {
   font-size: 2em;
@@ -190,7 +197,10 @@ footer {
 
 .main-nav {
   text-align: right;
-  margin-left: 40px; 
+  display: flex;
+  justify-content: flex-end;  
+  flex: 1;
+  margin-left: 60px;          
 }
 
 
