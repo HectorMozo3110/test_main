@@ -169,3 +169,31 @@ footer {
 .nav-links li a:hover {
   text-decoration: underline;
 }
+
+
+.split-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  background: #fff;
+}
+
+.lab-brand, .lab-logo, .main-nav {
+  flex: 1;
+  text-align: center;
+}
+
+.lab-brand {
+  text-align: left;
+}
+
+.main-nav {
+  text-align: right;
+}
+
+.lab-logo img {
+  height: 60px;
+  max-height: 100%;
+  display: inline-block;
+}

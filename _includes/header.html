@@ -1,15 +1,25 @@
 <header>
-  <div class="header-container">
+  <div class="header-container split-header">
+    
+    <!-- Left: Brand Text -->
     <div class="lab-brand">
       <div class="lab-name">NeureonMindFlux</div>
       <div class="lab-subtitle">Research Lab</div>
     </div>
-    <nav>
+
+    <!-- Center: Logo -->
+    <div class="lab-logo">
+      <img src="{{ '/assets/images/logo_lab.png' | relative_url }}" alt="Lab Logo" />
+    </div>
+
+    <!-- Right: Navigation -->
+    <nav class="main-nav">
       <ul class="nav-links">
         <li><a href="{{ '/' | relative_url }}">Home</a></li>
         <li><a href="{{ '/about' | relative_url }}">About</a></li>
         <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
       </ul>
     </nav>
+    
   </div>
 </header>
