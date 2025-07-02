@@ -14,7 +14,7 @@ header {
   border-bottom: 1px solid #ddd;
   padding: 0;
   margin-bottom: 30px;
-  height: auto; /* permite crecer si hay más contenido */
+  height: auto; 
   overflow: hidden;
   display: block;
 }
@@ -92,19 +92,26 @@ header {
   text-decoration: underline;
 }
 
-/* GitHub + Zenodo section */
-.lab-links-full {
-  width: 100%;
+/* Centered text between brand and nav */
+.lab-centered-text {
+  flex: 1;
   text-align: center;
-  margin-top: 12px;
-  padding-bottom: 14px;
 }
 
+.lab-centered-text p {
+  font-size: 0.95em;
+  font-style: italic;
+  color: #333;
+  margin: 8px 0;
+}
+
+/* GitHub + Zenodo icons centered below */
 .lab-links-icons {
   display: flex;
   justify-content: center;
   gap: 22px;
-  margin-bottom: 6px;
+  margin-top: 6px;
+  padding-bottom: 14px;
 }
 
 .lab-links-icons img {
@@ -115,13 +122,6 @@ header {
 
 .lab-links-icons img:hover {
   transform: scale(1.1);
-}
-
-.lab-links-text {
-  font-size: 0.95em;
-  color: #333;
-  font-style: italic;
-  margin: 0;
 }
 
 /* Footer */
