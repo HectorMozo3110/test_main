@@ -17,9 +17,13 @@ header {
 }
 
 .header-container {
+  display: flex;                    /* Split header in two columns */
+  justify-content: space-between;  /* One side left, one right */
+  align-items: center;             /* Align vertically */
+  padding: 20px 40px;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
+
 }
 
 header h1 {
@@ -127,4 +131,41 @@ footer {
     flex-direction: column;
     gap: 10px;
   }
+}
+
+/* Left-side branding block */
+.lab-brand {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.lab-name {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #007acc;
+}
+
+.lab-subtitle {
+  font-size: 1em;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Navigation menu (right side) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #007acc;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
 }
