@@ -1,18 +1,18 @@
 <header>
   <div class="header-container split-header">
-    
-    <!-- Left: Brand Text -->
+
+    <!-- Branding + Logo -->
     <div class="lab-brand">
-      <div class="lab-name">NeureonMindFlux</div>
-      <div class="lab-subtitle">Research Lab</div>
+      <div class="lab-logo">
+        <img src="{{ '/assets/images/logo_lab.png' | relative_url }}" alt="Lab Logo" />
+      </div>
+      <div>
+        <div class="lab-name">NeureonMindFlux</div>
+        <div class="lab-subtitle">Research Lab</div>
+      </div>
     </div>
 
-    <!-- Center: Logo -->
-    <div class="lab-logo">
-      <img src="{{ '/assets/images/logo_lab.png' | relative_url }}" alt="Lab Logo" />
-    </div>
-
-    <!-- Right: Navigation -->
+    <!-- Navigation -->
     <nav class="main-nav">
       <ul class="nav-links">
         <li><a href="{{ '/' | relative_url }}">Home</a></li>
@@ -20,6 +20,21 @@
         <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
       </ul>
     </nav>
-    
+
+  </div>
+
+  <!-- Sección centrada con texto e íconos -->
+  <div class="lab-links-full">
+    <p class="lab-links-text">
+      Browse our open research projects on GitHub and Zenodo
+    </p>
+    <div class="lab-links-icons">
+      <a href="https://github.com/Neureonmindflux-Research-Lab" target="_blank" title="View on GitHub">
+        <img src="{{ '/assets/images/github_icon.png' | relative_url }}" alt="GitHub" />
+      </a>
+      <a href="https://zenodo.org/search?q=Neureonmindflux" target="_blank" title="View on Zenodo">
+        <img src="{{ '/assets/images/zenodo_icon.png' | relative_url }}" alt="Zenodo" />
+      </a>
+    </div>
   </div>
 </header>

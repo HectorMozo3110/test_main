@@ -12,49 +12,115 @@ body {
 header {
   background-color: #ffffff;
   border-bottom: 1px solid #ddd;
-  padding: 0;                   
+  padding: 0;
   margin-bottom: 30px;
-  height: 100px;                
-  overflow: hidden;             
-  display: flex;
-  align-items: center;
+  height: auto; /* ← Cambiado de 100px a auto para permitir texto + íconos */
+  overflow: hidden;
+  display: block;
 }
 
-
+/* Header layout */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;              
+  padding: 0 40px;
   max-width: 960px;
   width: 100%;
   margin: 0 auto;
-  height: 100%;              
+  height: 100px;
 }
 
+/* Branding */
+.lab-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-align: left;
+  line-height: 1.2;
+}
 
-header h1 {
-  font-size: 2em;
+.lab-logo {
+  display: flex;
+  align-items: center;
+}
+
+.lab-logo img {
+  height: 60px;
+  max-height: 100%;
+  width: auto;
+  display: block;
+}
+
+.lab-name {
+  font-size: 1.6em;
+  font-weight: bold;
   color: #007acc;
-  margin: 0;
 }
 
-nav ul.nav-links {
+.lab-subtitle {
+  font-size: 1em;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* Navigation menu (right side) */
+.main-nav {
+  text-align: right;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.nav-links {
   list-style: none;
-  padding: 0;
-  margin-top: 10px;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul.nav-links li a {
+.nav-links li a {
   text-decoration: none;
   color: #007acc;
   font-weight: bold;
 }
 
-nav ul.nav-links li a:hover {
+.nav-links li a:hover {
   text-decoration: underline;
+}
+
+/* GitHub + Zenodo section (centrado) */
+.lab-links-full {
+  width: 100%;
+  text-align: center;
+  margin-top: 12px;
+  padding-bottom: 10px;
+}
+
+.lab-links-text {
+  font-size: 1em;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.lab-links-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.lab-links-icons img {
+  height: 24px;  /* Íconos pequeños */
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.lab-links-icons img:hover {
+  transform: scale(1.1);
 }
 
 /* Footer */
@@ -138,46 +204,17 @@ footer {
     flex-direction: column;
     gap: 10px;
   }
+
+  .lab-links-icons {
+    flex-direction: column;
+  }
+
+  .lab-links-icons img {
+    height: 30px;
+  }
 }
 
-/* Left-side branding block */
-.lab-brand {
-  text-align: left;
-  line-height: 1.2;
-}
-
-.lab-name {
-  font-size: 1.6em;
-  font-weight: bold;
-  color: #007acc;
-}
-
-.lab-subtitle {
-  font-size: 1em;
-  color: #555;
-  margin-top: 4px;
-}
-
-/* Navigation menu (right side) */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #007acc;
-  font-weight: bold;
-}
-
-.nav-links li a:hover {
-  text-decoration: underline;
-}
-
-
+/* Layout containers */
 .split-header {
   display: flex;
   justify-content: space-between;
@@ -185,39 +222,3 @@ footer {
   padding: 25px 40px;
   background: #fff;
 }
-
-.lab-brand, .lab-logo, .main-nav {
-  flex: 1;
-  text-align: center;
-}
-
-.lab-brand {
-  text-align: left;
-}
-
-.main-nav {
-  text-align: center;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-.lab-logo {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 1;
-  padding-left: 40px;
-}
-
-
-.lab-logo img {
-  height: 110px;
-  max-height: 100%;
-  width: auto;
-  display: inline-block;
-}
-
