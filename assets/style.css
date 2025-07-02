@@ -14,7 +14,7 @@ header {
   border-bottom: 1px solid #ddd;
   padding: 0;
   margin-bottom: 30px;
-  height: auto; /* ← Cambiado de 100px a auto para permitir texto + íconos */
+  height: auto; /* permite crecer si hay más contenido */
   overflow: hidden;
   display: block;
 }
@@ -92,35 +92,36 @@ header {
   text-decoration: underline;
 }
 
-/* GitHub + Zenodo section (centrado) */
+/* GitHub + Zenodo section */
 .lab-links-full {
   width: 100%;
   text-align: center;
   margin-top: 12px;
-  padding-bottom: 10px;
-}
-
-.lab-links-text {
-  font-size: 1em;
-  color: #333;
-  font-style: italic;
-  margin-bottom: 6px;
+  padding-bottom: 14px;
 }
 
 .lab-links-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 22px;
+  margin-bottom: 6px;
 }
 
 .lab-links-icons img {
-  height: 24px;  /* Íconos pequeños */
+  height: 28px;
   width: auto;
   transition: transform 0.2s ease;
 }
 
 .lab-links-icons img:hover {
   transform: scale(1.1);
+}
+
+.lab-links-text {
+  font-size: 0.95em;
+  color: #333;
+  font-style: italic;
+  margin: 0;
 }
 
 /* Footer */
@@ -178,7 +179,6 @@ footer {
   margin-top: 15px;
 }
 
-/* Images inside papers */
 .paper-content img {
   max-width: 100%;
   height: auto;
@@ -186,7 +186,7 @@ footer {
   margin: 20px auto;
 }
 
-/* Responsive typography */
+/* Responsive */
 @media screen and (max-width: 600px) {
   header h1 {
     font-size: 1.6em;
@@ -214,7 +214,7 @@ footer {
   }
 }
 
-/* Layout containers */
+/* Layout container */
 .split-header {
   display: flex;
   justify-content: space-between;
