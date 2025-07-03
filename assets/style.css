@@ -209,3 +209,15 @@ footer {
   padding: 25px 40px;
   background: #fff;
 }
+
+.lab-banner-full {
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  padding: 10px 0;
+}
+
+.full-banner-img {
+  max-width: 100%;
+  height: auto;
+}
