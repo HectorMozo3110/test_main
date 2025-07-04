@@ -10,14 +10,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     for (const repo of repos) {
       const repoName = repo.name;
-      const baseApi = `https://api.github.com/repos/${githubUser}/${repoName}/contents/paper/`;
 
-      const infoURL = await getRawFromGitHub(baseApi + "project_info.md");
-      const versionsURL = await getRawFromGitHub(baseApi + "versions.md");
-      const publicationsURL = await getRawFromGitHub(baseApi + "publications.md");
+      const infoURL = await getDownloadURL(githubUser, repoName, "project_info.md");
+      const versionsURL = await getDownloadURL(githubUser, repoName, "versions.md");
+      const publicationsURL = await getDownloadURL(githubUser, repoName, "publications.md");
 
       if (infoURL || versionsURL || publicationsURL) {
-        console.log(`[${repoName}] project_info: ${!!infoURL}, versions: ${!!versionsURL}, publications: ${!!publicationsURL}`);
+        console.log(`[${repoName}] ✅ Files found:`, {
+          info: !!infoURL,
+          versions: !!versionsURL,
+          publications: !!publicationsURL
+        });
+
         html += `<div class="project-block"><strong>${repoName}</strong>`;
 
         // 🧪 Project Info
@@ -55,33 +59,27 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     menu.innerHTML = html || `<div style="padding:10px">No valid projects found.</div>`;
   } catch (err) {
-    menu.innerHTML = `<div style="padding:10px">Error loading menu.</div>`;
     console.error("Hamburger menu error:", err);
+    menu.innerHTML = `<div style="padding:10px">Error loading menu.</div>`;
   }
 
-  // Get raw URL from GitHub API content endpoint
-  async function getRawFromGitHub(apiUrl) {
+  // ✅ Get the download URL from GitHub API (not raw.github)
+  async function getDownloadURL(user, repo, file) {
+    const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/paper/${file}`;
     try {
-      const res = await fetch(apiUrl, {
-        headers: {
-          Accept: "application/vnd.github.v3.raw"
-          // Authorization: `token TU_TOKEN` // opcional, para privados
-        }
-      });
-      return res.ok ? apiUrl : null;
+      const res = await fetch(apiUrl);
+      if (!res.ok) return null;
+      const json = await res.json();
+      return json.download_url || null;
     } catch {
       return null;
     }
   }
 
-  // Extract [text](url) links from markdown content
-  async function extractLinks(apiUrl) {
+  // ✅ Extract links from markdown via direct content
+  async function extractLinks(downloadUrl) {
     try {
-      const res = await fetch(apiUrl, {
-        headers: {
-          Accept: "application/vnd.github.v3.raw"
-        }
-      });
+      const res = await fetch(downloadUrl);
       const text = await res.text();
       const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
       const links = [];
@@ -95,11 +93,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Toggle menu
+  // ✅ Toggle visibility of the menu
   window.toggleHamburgerMenu = function () {
-    const menu = document.getElementById('hamburger-menu');
+    const menu = document.getElementById("hamburger-menu");
     if (menu) {
-      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
   };
 });
