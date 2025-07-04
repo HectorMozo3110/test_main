@@ -44,13 +44,21 @@ permalink: /
 
 ---
 
-## 🎯 Mission
+<section class="wide-block-section fade-up">
+  <div class="wide-block-container">
+    <h2>🎯 Mission</h2>
+    <p>
+      To empower scientific and social progress through applied AI systems that are secure, interpretable, and accessible —
+      across fields such as education, health, space, and infrastructure.
+    </p>
 
-To empower scientific and social progress through applied AI systems that are secure, interpretable, and accessible — across fields such as education, health, space, and infrastructure.
-
-## 🧠 Vision
-
-To build a future where artificial intelligence enhances human potential and global collaboration, without barriers of cost, location, or exclusivity.
+    <h2>🧠 Vision</h2>
+    <p>
+      To build a future where artificial intelligence enhances human potential and global collaboration,
+      without barriers of cost, location, or exclusivity.
+    </p>
+  </div>
+</section>
 
 ---
 
