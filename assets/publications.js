@@ -1,17 +1,17 @@
-
 document.addEventListener("DOMContentLoaded", async () => {
-  const githubOrg = "HectorMozo3110";
+  const githubUser = "HectorMozo3110";  
   const menu = document.getElementById("hamburger-menu");
 
   if (!menu) return;
 
   try {
-    const repos = await fetch(`https://api.github.com/orgs/${githubOrg}/repos`).then(res => res.json());
+   
+    const repos = await fetch(`https://api.github.com/users/${githubUser}/repos`).then(res => res.json());
     let html = "";
 
     for (const repo of repos) {
       const repoName = repo.name;
-      const base = `https://raw.githubusercontent.com/${githubOrg}/${repoName}/main/paper/`;
+      const base = `https://raw.githubusercontent.com/${githubUser}/${repoName}/main/paper/`;
 
       const infoURL = await checkFile(base + "project_info.md");
       const versionsURL = await checkFile(base + "versions.md");
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Hamburger menu error:", err);
   }
 
-  // Utility to check file existence
+  
   async function checkFile(url) {
     try {
       const res = await fetch(url);
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Utility to extract markdown links from a file
+
   async function extractLinks(url) {
     try {
       const res = await fetch(url);
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Toggle button
+  // ✅ Toggle menu visibility
   window.toggleHamburgerMenu = function () {
     const menu = document.getElementById('hamburger-menu');
     if (menu) {
