@@ -46,7 +46,8 @@ paper_viewer: true
       typographer: true
     }).use(window.markdownitFootnote);
 
-    const paperUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/paper.md`;
+    const paperUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/project_info.md`;
+
 
     try {
       let markdownText = await fetch(paperUrl).then(res => res.text());

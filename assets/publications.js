@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const githubUser = "HectorMozo3110";  
+  const githubUser = "HectorMozo3110";
   const menu = document.getElementById("hamburger-menu");
 
   if (!menu) return;
 
   try {
-   
     const repos = await fetch(`https://api.github.com/users/${githubUser}/repos`).then(res => res.json());
     let html = "";
 
@@ -20,25 +19,33 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (infoURL || versionsURL || publicationsURL) {
         html += `<div class="project-block"><strong>${repoName}</strong>`;
 
-        if (infoURL)
+        // 🧪 Project Info
+        if (infoURL) {
           html += `<a href="/test_main/papers/viewer.html?repo=${repoName}">🧪 Project Info</a>`;
-
-        if (versionsURL) {
-          const versionLinks = await extractLinks(versionsURL);
-          html += `<div class="submenu"><span>📦 Versions</span>`;
-          versionLinks.forEach(link => {
-            html += `<a href="${link.href}" target="_blank">↳ ${link.text}</a>`;
-          });
-          html += `</div>`;
         }
 
+        // 📦 Versions
+        if (versionsURL) {
+          const versionLinks = await extractLinks(versionsURL);
+          if (versionLinks.length > 0) {
+            html += `<div class="submenu"><span>📦 Versions</span>`;
+            versionLinks.forEach(link => {
+              html += `<a href="${link.href}" target="_blank">↳ ${link.text}</a>`;
+            });
+            html += `</div>`;
+          }
+        }
+
+        // 📄 Publications
         if (publicationsURL) {
           const pubLinks = await extractLinks(publicationsURL);
-          html += `<div class="submenu"><span>📄 Publications</span>`;
-          pubLinks.forEach(link => {
-            html += `<a href="${link.href}" target="_blank">↳ ${link.text}</a>`;
-          });
-          html += `</div>`;
+          if (pubLinks.length > 0) {
+            html += `<div class="submenu"><span>📄 Publications</span>`;
+            pubLinks.forEach(link => {
+              html += `<a href="${link.href}" target="_blank">↳ ${link.text}</a>`;
+            });
+            html += `</div>`;
+          }
         }
 
         html += `</div><hr/>`;
@@ -51,7 +58,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Hamburger menu error:", err);
   }
 
-  
+  // Check if file exists
   async function checkFile(url) {
     try {
       const res = await fetch(url);
@@ -61,7 +68,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-
+  // Extract [text](url) links from markdown file
   async function extractLinks(url) {
     try {
       const res = await fetch(url);
@@ -78,7 +85,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // ✅ Toggle menu visibility
+  // Toggle menu
   window.toggleHamburgerMenu = function () {
     const menu = document.getElementById('hamburger-menu');
     if (menu) {
