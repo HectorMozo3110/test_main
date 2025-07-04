@@ -4,34 +4,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const paths = container.querySelectorAll(".brain-path");
 
-  // Función para reiniciar animaciones en todos los trazos
+  // Reinicio completo: oculta y vuelve a animar
   function restartBrainAnimation() {
     paths.forEach((path) => {
       path.classList.remove("drawn");
+
+      // 🔁 Paso 1: ocultar trazo instantáneamente
+      path.style.transition = "none";
+      path.style.strokeDasharray = "1000";
+      path.style.strokeDashoffset = "1000";
       path.style.animation = "none";
-      path.offsetHeight; // Forzar reflow
-      path.style.animation = `
-        drawBrain 4s ease-out forwards,
-        complexPulse 6s infinite,
-        colorFlow 10s infinite linear
-      `;
+
+      // 🔁 Paso 2: esperar un frame y volver a animar
+      requestAnimationFrame(() => {
+        path.offsetHeight; // Forzar reflow
+        path.style.animation = `
+          drawBrain 4s ease-out forwards,
+          complexPulse 6s infinite,
+          colorFlow 10s infinite linear
+        `;
+      });
     });
   }
 
-  // Observador de intersección para disparar la primera vez
+  // Activación por scroll (solo una vez)
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         restartBrainAnimation();
       }
     });
-  }, {
-    threshold: 0.6,
-  });
+  }, { threshold: 0.6 });
 
   observer.observe(container);
 
-  // Marcar los paths como "dibujados" al terminar drawBrain
+  // Añadir la clase "drawn" al final de la animación principal
   paths.forEach((path) => {
     path.addEventListener("animationend", (e) => {
       if (e.animationName === "drawBrain") {
@@ -43,5 +50,5 @@ document.addEventListener("DOMContentLoaded", function () {
   // ⚡ Reconstrucción automática cada 15 segundos
   setInterval(() => {
     restartBrainAnimation();
-  }, 15000); // 15000 ms = 15 segundos
+  }, 15000);
 });
