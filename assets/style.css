@@ -214,26 +214,15 @@ footer {
   width: 100%;
   text-align: center;
   background-color: transparent;
-  padding: 10px 0;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .full-banner-img {
   max-width: 100%;
   height: auto;
-  max-height: 220px;  
+  max-height: 220px; 
   object-fit: contain;
-  display: block;
-  margin: 0 auto;
 }
 
-@media (max-width: 768px) {
-  .full-banner-img {
-    max-height: 160px;  
-  }
-}
 
-@media (max-width: 650px) {
-  .full-banner-img {
-    max-height: 250px;  
-  }
-}
