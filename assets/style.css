@@ -220,4 +220,20 @@ footer {
 .full-banner-img {
   max-width: 100%;
   height: auto;
+  max-height: 220px;  
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .full-banner-img {
+    max-height: 160px;  
+  }
+}
+
+@media (max-width: 480px) {
+  .full-banner-img {
+    max-height: 120px;  
+  }
 }
