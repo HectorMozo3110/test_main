@@ -1,11 +1,8 @@
 .mission-vision-section {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding: 60px 0;
+  padding: 60px 20px;
   display: flex;
   justify-content: center;
   background-color: transparent;
-  box-sizing: border-box;
 }
 
 .mission-vision-container {
