@@ -67,24 +67,29 @@ permalink: /
 
 
 
-
-## 🌐 Core Values
-
-- Open science and collaboration  
-- Digital accessibility  
-- Ethical intelligence  
-- Cross-disciplinary innovation  
-- Resilient system design
-
-<!--
-## 📚 Explore Our Work
-
-- [About the Lab]({{ '/about' | relative_url }})  
-- [View Publications]({{ '/publications' | relative_url }})
--->
-
----
-
-## 🔗 External Resources
-
-- [Organization Repo](https://github.com/Neureonmindflux-Research-Lab)  
+<section class="mission-vision-section fade-up">
+  <div class="mission-vision-container">
+    <div class="mission-vision-grid">
+      <div class="mission-block">
+        <h2>🌐 Core Values</h2>
+        <ul>
+          <li>Open science and collaboration</li>
+          <li>Digital accessibility</li>
+          <li>Ethical intelligence</li>
+          <li>Cross-disciplinary innovation</li>
+          <li>Resilient system design</li>
+        </ul>
+      </div>
+      <div class="vision-block">
+        <h2>🔗 External Resources</h2>
+        <ul>
+          <li>
+            <a href="https://github.com/Neureonmindflux-Research-Lab" target="_blank">
+              Organization Repo
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
