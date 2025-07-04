@@ -4,16 +4,24 @@ title: About the Lab\
 permalink: /about
 ---
 
-# 🧬 About Neureonmindflux Research Lab
+## 🧬 About Neureonmindflux Research Lab
 
-Neureonmindflux Research Lab is an open scientific initiative founded by Héctor Mozo, dedicated to research at the intersection of artificial intelligence, quantum technologies, and secure computation.
+**Neureonmindflux Research Lab** is an open scientific initiative founded by Héctor Mozo  
+[![ORCID](https://img.shields.io/badge/ORCID-0000--0002--1234--5678-a6ce39?logo=orcid&logoColor=white)](https://orcid.org/0009-0008-2426-623X)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hector-mozo-462899312/)
+[![GitHub](https://img.shields.io/badge/GitHub-hectormozo3110-181717?logo=github&logoColor=white)](https://github.com/hectormozo3110)
 
-Our mission is to design transparent, replicable, and impactful research systems with a focus on:
+dedicated to the advancement of **applied artificial intelligence** across critical technological domains.
 
-- Post-quantum cryptography  
-- Conscious agent architectures  
-- Secure AI infrastructures  
-- Scientific reproducibility and open access
+Our mission is to design transparent, replicable, and impactful research systems grounded in **real-world AI applications**, with a special focus on:
+
+- Post-quantum cryptography powered by AI  
+- Intelligent agent architectures with cognitive awareness  
+- Secure and explainable AI infrastructures  
+- Scientific reproducibility and open access for the AI research community  
+- Applied quantum algorithms enhancing AI capabilities  
+- Deployment of applied AI in **space systems**, **commercial infrastructure**, **precision agriculture**, and **industrial automation**
+
 
 ---
 
