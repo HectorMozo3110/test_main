@@ -13,6 +13,24 @@ permalink: /about
 [![Zenodo](https://img.shields.io/badge/Zenodo-Profile-blue?logo=zenodo)](https://zenodo.org/me/uploads?q=&f=shared_with_me%3Afalse&l=list&p=1&s=10&sort=newest)
 [![Facebook](https://img.shields.io/badge/Facebook-Profile-1877f2?logo=facebook&logoColor=white)](https://www.facebook.com/eduardo.gonzalezz.7547/)
 
+---
+🎓 **Academic Ambassador** | 🤝 *Open Research Advocate* | 🧩 *Modular System Architect*  
+🧠 **Independent Researcher** (Self-directed, self-employed)  
+🔬 **Peer Reviewer** – *Journal of Open Source Software*  
+🚀 **Microsoft Learn Student Ambassador** *(Jan 2024 – Present)*  
+🌐 **Google Developer Student Club Member**
+
+
+
+### 👥 **Professional & Academic Memberships**
+- 🧮 Member of **ACM**  
+- ⚡ Member of **IEEE**  
+- 🎓 Member of **NSCS** *(National Society of Collegiate Scholars)*  
+- 💡 Member of **NSLS** *(National Society of Leadership and Success)*  
+- 🔑 Member of **Golden Key International Honour Society**
+- 
+---
+
 dedicated to the advancement of **applied artificial intelligence** across critical technological domains.
 
 Our mission is to design transparent, replicable, and impactful research systems grounded in **real-world AI applications**, with a special focus on:
@@ -26,22 +44,7 @@ Our mission is to design transparent, replicable, and impactful research systems
 
 
 ---
-🎓 **Academic Ambassador** | 🤝 *Open Research Advocate* | 🧩 *Modular System Architect*  
-🧠 **Independent Researcher** (Self-directed, self-employed)  
-🔬 **Peer Reviewer** – *Journal of Open Source Software*  
-🚀 **Microsoft Learn Student Ambassador** *(Jan 2024 – Present)*  
-🌐 **Google Developer Student Club Member**
 
----
-
-### 👥 **Professional & Academic Memberships**
-- 🧮 Member of **ACM**  
-- ⚡ Member of **IEEE**  
-- 🎓 Member of **NSCS** *(National Society of Collegiate Scholars)*  
-- 💡 Member of **NSLS** *(National Society of Leadership and Success)*  
-- 🔑 Member of **Golden Key International Honour Society**
-- 
----
 ## 📍 Affiliation
 
 Department of Computer Science  
