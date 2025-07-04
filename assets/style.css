@@ -213,16 +213,12 @@ footer {
 .lab-banner-full {
   width: 100%;
   text-align: center;
-  background-color: transparent;
-  margin: 0 auto;
-  padding: 0;
+  padding: 10px 0;
 }
 
 .full-banner-img {
   max-width: 100%;
   height: auto;
-  max-height: 220px; 
-  object-fit: contain;
 }
 
 
