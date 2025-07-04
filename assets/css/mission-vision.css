@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   background-color: transparent;
+  box-sizing: border-box;
 }
 
 .mission-vision-container {
@@ -14,6 +15,7 @@
   padding: 40px;
   width: 100%;
   max-width: 1000px;
+  box-sizing: border-box;
 }
 
 .mission-vision-container h2 {
