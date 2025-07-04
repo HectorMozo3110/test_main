@@ -4,21 +4,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const paths = container.querySelectorAll(".brain-path");
 
+  // Función para reiniciar animaciones en todos los trazos
+  function restartBrainAnimation() {
+    paths.forEach((path) => {
+      path.classList.remove("drawn");
+      path.style.animation = "none";
+      path.offsetHeight; // Forzar reflow
+      path.style.animation = `
+        drawBrain 4s ease-out forwards,
+        complexPulse 6s infinite,
+        colorFlow 10s infinite linear
+      `;
+    });
+  }
+
+  // Observador de intersección para disparar la primera vez
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-
-      paths.forEach((path) => {
-        // Reinicia la animación
-        path.classList.remove("drawn"); // Quita estado anterior si existe
-        path.style.animation = "none";  // Detiene animaciones previas
-        path.offsetHeight;              // Fuerza reflow
-        path.style.animation = `
-          drawBrain 4s ease-out forwards,
-          complexPulse 6s infinite,
-          colorFlow 10s infinite linear
-        `;
-      });
+      if (entry.isIntersecting) {
+        restartBrainAnimation();
+      }
     });
   }, {
     threshold: 0.6,
@@ -26,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(container);
 
-  // Asegura que la clase "drawn" se aplique al final de drawBrain
+  // Marcar los paths como "dibujados" al terminar drawBrain
   paths.forEach((path) => {
     path.addEventListener("animationend", (e) => {
       if (e.animationName === "drawBrain") {
@@ -34,4 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // ⚡ Reconstrucción automática cada 15 segundos
+  setInterval(() => {
+    restartBrainAnimation();
+  }, 15000); // 15000 ms = 15 segundos
 });
