@@ -83,24 +83,26 @@ permalink: /
           <li>Resilient system design</li>
         </ul>
       </div>
-      <div class="vision-block">
-        <h2><img src="{{ '/assets/images/link_icon.png' | relative_url }}" alt="External Resources Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
-          External Resources</h2>
-      <ul style="list-style: none; padding-left: 0;">
-    <li style="margin-bottom: 10px;">
+     <div class="vision-block">
+  <h2>
+    <img src="{{ '/assets/images/link_icon.png' | relative_url }}" alt="External Resources Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
+    External Resources
+  </h2>
+  <ul class="external-list">
+    <li>
       <a href="https://github.com/Neureonmindflux-Research-Lab" target="_blank" class="external-link">
-        <img src="{{ '/assets/images/github_icon.png' | relative_url }}" alt="GitHub" height="18" style="vertical-align: middle; margin-right: 6px;" />
+        <img src="{{ '/assets/images/github_icon.png' | relative_url }}" alt="GitHub" height="20" />
         GitHub Repository
       </a>
     </li>
     <li>
       <a href="https://zenodo.org/communities/neureonmindflux" target="_blank" class="external-link">
-        <img src="{{ '/assets/images/zenodo_icon_01.png' | relative_url }}" alt="Zenodo" height="18" style="vertical-align: middle; margin-right: 6px;" />
+        <img src="{{ '/assets/images/zenodo_icon_01.png' | relative_url }}" alt="Zenodo" height="20" />
         Zenodo Archive
       </a>
     </li>
   </ul>
-      </div>
+</div>
     </div>
   </div>
 </section>
