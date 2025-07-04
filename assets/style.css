@@ -236,3 +236,48 @@ footer {
   }
 }
 
+.mission-vision-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.mission-vision-container {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px;
+  box-sizing: border-box;
+}
+
+.mission-vision-container h2 {
+  font-size: 1.4em;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #222;
+}
+
+.mission-vision-container p {
+  margin-bottom: 30px;
+  font-size: 1.05em;
+  line-height: 1.6;
+}
+
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
