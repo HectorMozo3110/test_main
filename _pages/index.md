@@ -48,7 +48,7 @@ permalink: /
   <div class="mission-vision-container">
     <div class="mission-vision-grid">
       <div class="mission-block">
-        <h2><img src="{{ '/assets/images/robot_mission_icon.png' | relative_url }}" alt="Mission Icon" height="22" style="vertical-align: middle; margin-right: 10px;" />
+        <h2><img src="{{ '/assets/images/robot_mission_icon.png' | relative_url }}" alt="Mission Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
           Mission</h2>
         <p>
           To empower scientific and social progress through applied AI systems that are secure, interpretable, and accessible —
@@ -56,7 +56,7 @@ permalink: /
         </p>
       </div>
       <div class="vision-block">
-        <h2><img src="{{ '/assets/images/vision_head_icon.png' | relative_url }}" alt="Vision Icon" height="22" style="vertical-align: middle; margin-right: 10px;" />
+        <h2><img src="{{ '/assets/images/vision_head_icon.png' | relative_url }}" alt="Vision Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
           Vision</h2>
         <p>
           To build a future where artificial intelligence enhances human potential and global collaboration,
@@ -73,7 +73,7 @@ permalink: /
   <div class="mission-vision-container">
     <div class="mission-vision-grid">
       <div class="mission-block">
-        <h2><img src="{{ '/assets/images/core_values_icon.png' | relative_url }}" alt="Core Values Icon" height="22" style="vertical-align: middle; margin-right: 10px;" />
+        <h2><img src="{{ '/assets/images/core_values_icon.png' | relative_url }}" alt="Core Values Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
           Core Values</h2>
         <ul>
           <li>Open science and collaboration</li>
@@ -84,7 +84,7 @@ permalink: /
         </ul>
       </div>
       <div class="vision-block">
-        <h2><img src="{{ '/assets/images/link_icon.png' | relative_url }}" alt="External Resources Icon" height="22" style="vertical-align: middle; margin-right: 10px;" />
+        <h2><img src="{{ '/assets/images/link_icon.png' | relative_url }}" alt="External Resources Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
           External Resources</h2>
         <ul>
           <li>
