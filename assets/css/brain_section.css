@@ -56,8 +56,8 @@
 
 .brain-path {
   stroke: #00e1ff;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
   animation:
     infiniteDraw 14s linear infinite,
     complexPulse 6s infinite,
@@ -65,17 +65,19 @@
   filter: drop-shadow(0 0 4px #00e1ff);
 }
 
-/* Protección extra (puedes dejarla si usas JS) */
-.brain-path.drawn {
-  stroke-dashoffset: 0 !important;
-}
-
+/* 🧠 Reconstrucción suave: dibuja → mantiene → desaparece */
 @keyframes infiniteDraw {
-  from {
-    stroke-dashoffset: 1000;
+  0% {
+    stroke-dashoffset: 600;
   }
-  to {
+  40% {
     stroke-dashoffset: 0;
+  }
+  60% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 600;
   }
 }
 
