@@ -42,15 +42,19 @@
   border-radius: 12px;
 }
 
+
 .brain-svg {
   max-width: 100%;
   height: auto;
+  animation: pulse 5s ease-in-out infinite;
+  transform-origin: center;
 }
 
-.brain-svg path {
-  stroke-dasharray: 400;
-  stroke-dashoffset: 400;
-  animation: drawBrain 2.8s ease-out forwards;
+
+.brain-path {
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: drawBrain 3s ease-out forwards;
 }
 
 @keyframes drawBrain {
@@ -58,7 +62,6 @@
     stroke-dashoffset: 0;
   }
 }
-
 
 .fade-up {
   opacity: 0;
@@ -71,4 +74,10 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%     { transform: scale(1.015); }
 }

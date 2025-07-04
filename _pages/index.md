@@ -34,16 +34,10 @@ permalink: /
       </ul>
     </div>
 
-    <div class="brain-card-animation">
-      <svg class="brain-svg" viewBox="0 0 100 100">
-        <path
-          d="M10,50 C10,20 90,20 90,50 C90,80 10,80 10,50 Z"
-          fill="none"
-          stroke="#007acc"
-          stroke-width="2"
-        />
-      </svg>
-    </div>
+   <div class="brain-card-animation">
+  {% include_relative assets/svg/brain.html %}
+   </div>
+
   </div>
 </section>
 
