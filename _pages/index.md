@@ -4,10 +4,11 @@ title: NeureonMindFlux Research Lab
 permalink: /
 ---
 
-<div class="fade-up">
+<div class="fade-up hero-section">
   <h1>🧠 Welcome to NeureonMindFlux Research Lab</h1>
   <em>Exploring the Power of Applied Artificial Intelligence</em>
 </div>
+
 
 ---
 
@@ -15,7 +16,7 @@ permalink: /
 <section class="brain-card-section fade-up">
   <div class="brain-card-container">
     <div class="brain-card-text">
-      <h2>🧠 Exploring the Power of Applied Artificial Intelligence</h2>
+      <h2> Exploring the Power of Applied Artificial Intelligence</h2>
       <p>
         NeureonMindFlux is a forward-looking research laboratory committed to the advancement of applied artificial intelligence across diverse real-world systems. Our focus spans fields such as space technology, digital health, autonomous systems, educational platforms, and intelligent infrastructure — where AI is not just a tool, but a foundational enabler of meaningful progress.
       </p>
