@@ -1,12 +1,13 @@
-.wide-block-section {
-  padding: 60px 20px;
+.mission-vision-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 60px 0;
   display: flex;
   justify-content: center;
-  width: 100%;
   background-color: transparent;
 }
 
-.wide-block-container {
+.mission-vision-container {
   background-color: #ffffff;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
@@ -15,7 +16,7 @@
   max-width: 1000px;
 }
 
-.wide-block-container h2 {
+.mission-vision-container h2 {
   font-size: 1.4em;
   margin-bottom: 12px;
   display: flex;
@@ -24,8 +25,22 @@
   color: #222;
 }
 
-.wide-block-container p {
+.mission-vision-container p {
   margin-bottom: 30px;
   font-size: 1.05em;
   line-height: 1.6;
+}
+
+/* Fade-up animation */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
