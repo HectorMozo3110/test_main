@@ -4,30 +4,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const paths = container.querySelectorAll(".brain-path");
 
-  // Reinicio completo: oculta y vuelve a animar
-  function restartBrainAnimation() {
+  // Verifica si el cerebro necesita reinicio (en caso de fallo CSS)
+  function restartBrainAnimation(force = false) {
     paths.forEach((path) => {
-      path.classList.remove("drawn");
+      const computedOffset = parseFloat(getComputedStyle(path).strokeDashoffset);
+      
+      // Solo reiniciar si:
+      // - el stroke no está en 0
+      // - o se forza manualmente
+      if (force || computedOffset > 10) {
+        path.classList.remove("drawn");
+        path.style.transition = "none";
+        path.style.strokeDasharray = "1000";
+        path.style.strokeDashoffset = "1000";
+        path.style.animation = "none";
 
-      // 🔁 Paso 1: ocultar trazo instantáneamente
-      path.style.transition = "none";
-      path.style.strokeDasharray = "1000";
-      path.style.strokeDashoffset = "1000";
-      path.style.animation = "none";
-
-      // 🔁 Paso 2: esperar un frame y volver a animar
-      requestAnimationFrame(() => {
-        path.offsetHeight; // Forzar reflow
-        path.style.animation = `
-          drawBrain 4s ease-out forwards,
-          complexPulse 6s infinite,
-          colorFlow 10s infinite linear
-        `;
-      });
+        requestAnimationFrame(() => {
+          path.offsetHeight; // reflow
+          path.style.animation = `
+            infiniteDraw 14s linear infinite,
+            complexPulse 6s infinite,
+            colorFlow 10s infinite linear
+          `;
+        });
+      }
     });
   }
 
-  // Activación por scroll (solo una vez)
+  // 🧠 Observador por si entra a pantalla (útil en modo mobile o tabs)
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -38,17 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(container);
 
-  // Añadir la clase "drawn" al final de la animación principal
-  paths.forEach((path) => {
-    path.addEventListener("animationend", (e) => {
-      if (e.animationName === "drawBrain") {
-        path.classList.add("drawn");
-      }
-    });
+  // 💤 Si el usuario vuelve a la pestaña
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      restartBrainAnimation();
+    }
   });
 
-  // ⚡ Reconstrucción automática cada 15 segundos
+  // 🕒 Refuerzo cada 30s solo si algo se desincroniza
   setInterval(() => {
     restartBrainAnimation();
-  }, 15000);
+  }, 30000); // cada 30 segundos, solo si lo necesita
 });
