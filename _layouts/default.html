@@ -4,11 +4,14 @@
 
   <body>
     {% include header.html %}
-  
+  {% if page.url == "/" %}
+  <div class="lab-banner-full">
+    <img src="{{ '/assets/images/banner_lab.png' | relative_url }}" alt="NeureonMindFlux Banner" class="full-banner-img" />
+  </div>
+{% endif %}
+
     <main id="main-content">
-      <div class="lab-banner-full">
-  <img src="{{ '/assets/images/banner_lab.png' | relative_url }}" alt="NeureonMindFlux Banner" class="full-banner-img" />
-</div>
+   
       {{ content }}
     </main>
     {% include footer.html %}
