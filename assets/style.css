@@ -1,7 +1,7 @@
 /* Global body layout */
 body {
   font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  background-color: #f2f7fa;
+  background: linear-gradient(135deg, #f2f7fa, #eaf4fb);
   color: #222;
   line-height: 1.6;
   margin: 0;
