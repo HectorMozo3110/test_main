@@ -42,7 +42,7 @@ permalink: /
   </div>
 </section>
 
----
+
 
 <section class="wide-block-section fade-up">
   <div class="wide-block-container">
@@ -60,7 +60,7 @@ permalink: /
   </div>
 </section>
 
----
+
 
 ## 🌐 Core Values
 
