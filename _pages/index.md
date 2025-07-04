@@ -35,8 +35,9 @@ permalink: /
     </div>
 
    <div class="brain-card-animation">
-  {% include_relative assets/svg/brain.html %}
-   </div>
+  {% include brain.html %}
+</div>
+
 
   </div>
 </section>
