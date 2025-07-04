@@ -290,6 +290,6 @@ footer {
 
 .mission-block,
 .vision-block {
-  flex: 1 1 48%;
+  flex: 1 1 40%;
   min-width: 300px;
 }
