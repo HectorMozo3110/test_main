@@ -30,7 +30,7 @@
   line-height: 1.6;
 }
 
-/* Fade-up animation */
+
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
