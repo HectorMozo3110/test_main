@@ -62,7 +62,13 @@
     drawBrain 4s ease-out forwards,
     complexPulse 6s infinite,
     colorFlow 10s infinite linear;
+  animation-fill-mode: forwards;
   filter: drop-shadow(0 0 4px #00e1ff);
+}
+
+/* Protección extra por si otras animaciones alteran stroke-dashoffset */
+.brain-path.drawn {
+  stroke-dashoffset: 0 !important;
 }
 
 @keyframes drawBrain {
@@ -77,7 +83,6 @@
   15%       { filter: drop-shadow(0 0 10px #00ffff); transform: scale(1.015); }
   20%, 25%  { filter: drop-shadow(0 0 6px #00e1ff); transform: scale(1); }
 
-  /* ráfaga rápida de pulsos */
   30%, 31%  { transform: scale(1.02);  filter: drop-shadow(0 0 12px #00f7ff); }
   32%, 33%  { transform: scale(1.01);  filter: drop-shadow(0 0 6px #00ccff); }
   34%, 35%  { transform: scale(1.02);  filter: drop-shadow(0 0 10px #00ffff); }
@@ -85,7 +90,6 @@
   38%, 39%  { transform: scale(1.02);  filter: drop-shadow(0 0 12px #00e1ff); }
   40%       { transform: scale(1);     filter: drop-shadow(0 0 4px #00ccff); }
 
-  /* 3 lentos */
   60%, 65%, 70% {
     transform: scale(1.015);
     filter: drop-shadow(0 0 8px #00f7ff);

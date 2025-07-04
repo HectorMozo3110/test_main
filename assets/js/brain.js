@@ -1,18 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".brain-card-animation");
+  if (!container) return;
+
+  const paths = container.querySelectorAll(".brain-path");
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      const path = entry.target.querySelector(".brain-path");
-      if (entry.isIntersecting && path) {
-      
-        path.style.animation = "none";
-        path.offsetHeight; 
-        path.style.animation = "drawBrain 4s ease-out forwards";
-      }
+      if (!entry.isIntersecting) return;
+
+      paths.forEach((path) => {
+        // Reinicia la animación
+        path.classList.remove("drawn"); // Quita estado anterior si existe
+        path.style.animation = "none";  // Detiene animaciones previas
+        path.offsetHeight;              // Fuerza reflow
+        path.style.animation = `
+          drawBrain 4s ease-out forwards,
+          complexPulse 6s infinite,
+          colorFlow 10s infinite linear
+        `;
+      });
     });
   }, {
-    threshold: 0.6 
+    threshold: 0.6,
   });
 
-  const container = document.querySelector(".brain-card-animation");
-  if (container) observer.observe(container);
+  observer.observe(container);
+
+  // Asegura que la clase "drawn" se aplique al final de drawBrain
+  paths.forEach((path) => {
+    path.addEventListener("animationend", (e) => {
+      if (e.animationName === "drawBrain") {
+        path.classList.add("drawn");
+      }
+    });
+  });
 });
