@@ -6,7 +6,7 @@ permalink: /about
 
 ## 🧬 About Neureonmindflux Research Lab
 
-**Neureonmindflux Research Lab** is an open scientific initiative founded by Héctor Mozo  
+**Neureonmindflux Research Lab** is an open scientific initiative founded by Hector E Mozo <strong style="color:#0066cc; font-size:1.1em; font-weight:600;">Héctor Mozo</strong>  
 [![ORCID](https://img.shields.io/badge/ORCID-0000--0002--1234--5678-a6ce39?logo=orcid&logoColor=white)](https://orcid.org/0009-0008-2426-623X)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hector-mozo-462899312/)
 [![GitHub](https://img.shields.io/badge/GitHub-hectormozo3110-181717?logo=github&logoColor=white)](https://github.com/hectormozo3110)
