@@ -46,19 +46,25 @@ permalink: /
 
 <section class="mission-vision-section fade-up">
   <div class="mission-vision-container">
-    <h2>🎯 Mission</h2>
-    <p>
-      To empower scientific and social progress through applied AI systems that are secure, interpretable, and accessible —
-      across fields such as education, health, space, and infrastructure.
-    </p>
-
-    <h2>🧠 Vision</h2>
-    <p>
-      To build a future where artificial intelligence enhances human potential and global collaboration,
-      without barriers of cost, location, or exclusivity.
-    </p>
+    <div class="mission-vision-grid">
+      <div class="mission-block">
+        <h2>🎯 Mission</h2>
+        <p>
+          To empower scientific and social progress through applied AI systems that are secure, interpretable, and accessible —
+          across fields such as education, health, space, and infrastructure.
+        </p>
+      </div>
+      <div class="vision-block">
+        <h2>🧠 Vision</h2>
+        <p>
+          To build a future where artificial intelligence enhances human potential and global collaboration,
+          without barriers of cost, location, or exclusivity.
+        </p>
+      </div>
+    </div>
   </div>
 </section>
+
 
 
 

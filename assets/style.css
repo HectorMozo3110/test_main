@@ -281,3 +281,15 @@ footer {
     transform: translateY(0);
   }
 }
+
+.mission-vision-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.mission-block,
+.vision-block {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
