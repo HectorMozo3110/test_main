@@ -44,8 +44,8 @@ permalink: /
 
 
 
-<section class="wide-block-section fade-up">
-  <div class="wide-block-container">
+<section class="mission-vision-section fade-up">
+  <div class="mission-vision-container">
     <h2>🎯 Mission</h2>
     <p>
       To empower scientific and social progress through applied AI systems that are secure, interpretable, and accessible —
