@@ -100,9 +100,9 @@ We follow a reproducible, transparent, and modular research process:
 - Experiments and evaluation based on scientific reproducibility  
 - Versioned datasets and code archives via Zenodo, GitHub, and DVC  
 - Peer review and open feedback via preprints, arXiv, and open repositories
+  
 ---
 ## 🔧 Active Projects
-
 We are currently building and maintaining:
 
 - **BB84+**: A hybrid quantum-classical encryption system with post-quantum verification   
