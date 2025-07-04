@@ -249,7 +249,7 @@ footer {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   padding: 40px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   box-sizing: border-box;
 }
 
@@ -290,6 +290,6 @@ footer {
 
 .mission-block,
 .vision-block {
-  flex: 1 1 45%;
+  flex: 1 1 48%;
   min-width: 300px;
 }
