@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
+
+  <body>
+    {% include header.html %}
   <div class="lab-banner-full">
   <img src="{{ '/assets/images/banner_lab.png' | relative_url }}" alt="NeureonMindFlux Banner" class="full-banner-img" />
 </div>
-  <body>
-    {% include header.html %}
+
     <main id="main-content">
       {{ content }}
     </main>
