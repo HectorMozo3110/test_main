@@ -27,6 +27,7 @@
   margin-bottom: 20px;
   color: #007acc;
   text-align: center;
+  white-space: nowrap;
 }
 
 .brain-card-text ul {
