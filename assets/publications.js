@@ -1,79 +1,88 @@
-// Load and render papers using markdown-it with KaTeX, footnotes, and dynamic images
-document.addEventListener("DOMContentLoaded", async () => {
-  const USER_NAME = "HectorMozo3110";
-  const papersContainer = document.getElementById("papers");
 
-  // Initialize markdown-it with footnotes and HTML support
-  const md = window.markdownit({
-    html: true,
-    linkify: true,
-    typographer: true
-  }).use(window.markdownitFootnote);
+document.addEventListener("DOMContentLoaded", async () => {
+  const githubOrg = "HectorMozo3110";
+  const menu = document.getElementById("hamburger-menu");
+
+  if (!menu) return;
 
   try {
-    // Fetch all public repositories from the GitHub user
-    const repoResponse = await fetch(`https://api.github.com/users/${USER_NAME}/repos`);
-    const repos = await repoResponse.json();
+    const repos = await fetch(`https://api.github.com/orgs/${githubOrg}/repos`).then(res => res.json());
+    let html = "";
 
     for (const repo of repos) {
       const repoName = repo.name;
-      const paperUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/paper.md`;
+      const base = `https://raw.githubusercontent.com/${githubOrg}/${repoName}/main/paper/`;
 
-      try {
-        const paperRes = await fetch(paperUrl);
-        if (!paperRes.ok) continue;
+      const infoURL = await checkFile(base + "project_info.md");
+      const versionsURL = await checkFile(base + "versions.md");
+      const publicationsURL = await checkFile(base + "publications.md");
 
-        let markdownText = await paperRes.text();
+      if (infoURL || versionsURL || publicationsURL) {
+        html += `<div class="project-block"><strong>${repoName}</strong>`;
 
-        // Replace relative image paths with full GitHub URLs and apply image width if defined
-        markdownText = markdownText.replace(
-          /!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,
-          (match, alt, src, attrs) => {
-            const fullUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/${src}`;
-            let style = '';
-            if (attrs && attrs.includes("width=")) {
-              const width = attrs.match(/width=([0-9]+%?)/)?.[1];
-              if (width) {
-                style = ` style="max-width:${width}; height:auto;"`;
-              }
-            }
-            return `<img alt="${alt}" src="${fullUrl}"${style} />`;
-          }
-        );
+        if (infoURL)
+          html += `<a href="/test_main/papers/viewer.html?repo=${repoName}">🧪 Project Info</a>`;
 
-        const htmlContent = md.render(markdownText);
+        if (versionsURL) {
+          const versionLinks = await extractLinks(versionsURL);
+          html += `<div class="submenu"><span>📦 Versions</span>`;
+          versionLinks.forEach(link => {
+            html += `<a href="${link.href}" target="_blank">↳ ${link.text}</a>`;
+          });
+          html += `</div>`;
+        }
 
-        // Create a container card for the paper
-        const card = document.createElement("div");
-        card.classList.add("paper-card");
-        card.innerHTML = `
-          <h2>${repoName}</h2>
-          <div class="paper-content">
-            ${htmlContent}
-          </div>
-          <p>
-            <a class="read-more-link" href="/test_main/papers/viewer.html?repo=${repoName}">
-              Read Full Paper →
-            </a>
-          </p>
-          <hr/>
-        `;
+        if (publicationsURL) {
+          const pubLinks = await extractLinks(publicationsURL);
+          html += `<div class="submenu"><span>📄 Publications</span>`;
+          pubLinks.forEach(link => {
+            html += `<a href="${link.href}" target="_blank">↳ ${link.text}</a>`;
+          });
+          html += `</div>`;
+        }
 
-        papersContainer.appendChild(card);
-
-        // Trigger KaTeX rendering for math formulas
-        renderMathInElement(card, {
-          delimiters: [
-            { left: "$$", right: "$$", display: true },
-            { left: "$", right: "$", display: false }
-          ]
-        });
-      } catch (err) {
-        console.warn(`Could not fetch paper for ${repoName}:`, err);
+        html += `</div><hr/>`;
       }
     }
+
+    menu.innerHTML = html || `<div style="padding:10px">No valid projects found.</div>`;
   } catch (err) {
-    papersContainer.innerHTML = "<p>Error loading papers. Try again later.</p>";
-    console.error(err);
+    menu.innerHTML = `<div style="padding:10px">Error loading menu.</div>`;
+    console.error("Hamburger menu error:", err);
   }
+
+  // Utility to check file existence
+  async function checkFile(url) {
+    try {
+      const res = await fetch(url);
+      return res.ok ? url : null;
+    } catch {
+      return null;
+    }
+  }
+
+  // Utility to extract markdown links from a file
+  async function extractLinks(url) {
+    try {
+      const res = await fetch(url);
+      const text = await res.text();
+      const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+      const links = [];
+      let match;
+      while ((match = regex.exec(text)) !== null) {
+        links.push({ text: match[1], href: match[2] });
+      }
+      return links;
+    } catch {
+      return [];
+    }
+  }
+
+  // Toggle button
+  window.toggleHamburgerMenu = function () {
+    const menu = document.getElementById('hamburger-menu');
+    if (menu) {
+      menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    }
+  };
 });

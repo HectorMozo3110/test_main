@@ -27,9 +27,15 @@
       <ul class="nav-links">
         <li><a href="{{ '/' | relative_url }}">Home</a></li>
         <li><a href="{{ '/about' | relative_url }}">About</a></li>
-        <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
       </ul>
     </nav>
+      <!-- Project Dropdown (New Hamburger Menu) -->
+    <div class="hamburger-container">
+      <button class="hamburger-button" onclick="toggleHamburgerMenu()">☰ Menu</button>
+      <div id="hamburger-menu" class="hamburger-dropdown">
+        <!-- Will be filled by JS -->
+      </div>
+    </div>
 
   </div>
 </header>
