@@ -10,13 +10,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     for (const repo of repos) {
       const repoName = repo.name;
-      const base = `https://raw.githubusercontent.com/${githubUser}/${repoName}/main/paper/`;
+      const baseApi = `https://api.github.com/repos/${githubUser}/${repoName}/contents/paper/`;
 
-      const infoURL = await checkFile(base + "project_info.md");
-      const versionsURL = await checkFile(base + "versions.md");
-      const publicationsURL = await checkFile(base + "publications.md");
+      const infoURL = await getRawFromGitHub(baseApi + "project_info.md");
+      const versionsURL = await getRawFromGitHub(baseApi + "versions.md");
+      const publicationsURL = await getRawFromGitHub(baseApi + "publications.md");
 
       if (infoURL || versionsURL || publicationsURL) {
+        console.log(`[${repoName}] project_info: ${!!infoURL}, versions: ${!!versionsURL}, publications: ${!!publicationsURL}`);
         html += `<div class="project-block"><strong>${repoName}</strong>`;
 
         // 🧪 Project Info
@@ -58,20 +59,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Hamburger menu error:", err);
   }
 
-  // Check if file exists
-  async function checkFile(url) {
+  // Get raw URL from GitHub API content endpoint
+  async function getRawFromGitHub(apiUrl) {
     try {
-      const res = await fetch(url);
-      return res.ok ? url : null;
+      const res = await fetch(apiUrl, {
+        headers: {
+          Accept: "application/vnd.github.v3.raw"
+          // Authorization: `token TU_TOKEN` // opcional, para privados
+        }
+      });
+      return res.ok ? apiUrl : null;
     } catch {
       return null;
     }
   }
 
-  // Extract [text](url) links from markdown file
-  async function extractLinks(url) {
+  // Extract [text](url) links from markdown content
+  async function extractLinks(apiUrl) {
     try {
-      const res = await fetch(url);
+      const res = await fetch(apiUrl, {
+        headers: {
+          Accept: "application/vnd.github.v3.raw"
+        }
+      });
       const text = await res.text();
       const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
       const links = [];
