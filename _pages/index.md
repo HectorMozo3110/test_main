@@ -48,14 +48,16 @@ permalink: /
   <div class="mission-vision-container">
     <div class="mission-vision-grid">
       <div class="mission-block">
-        <h2>🎯 Mission</h2>
+        <h2><img src="{{ '/assets/images/robot_mission_icon.png' | relative_url }}" alt="Mission Icon" height="22" style="vertical-align: middle; margin-right: 10px;" />
+          Mission</h2>
         <p>
           To empower scientific and social progress through applied AI systems that are secure, interpretable, and accessible —
           across fields such as education, health, space, and infrastructure.
         </p>
       </div>
       <div class="vision-block">
-        <h2>🧠 Vision</h2>
+        <h2><img src="{{ '/assets/images/vision_head_icon.png' | relative_url }}" alt="Vision Icon" height="22" style="vertical-align: middle; margin-right: 10px;" />
+          Vision</h2>
         <p>
           To build a future where artificial intelligence enhances human potential and global collaboration,
           without barriers of cost, location, or exclusivity.
@@ -71,7 +73,8 @@ permalink: /
   <div class="mission-vision-container">
     <div class="mission-vision-grid">
       <div class="mission-block">
-        <h2>🌐 Core Values</h2>
+        <h2><img src="{{ '/assets/images/core_values_icon.png' | relative_url }}" alt="Core Values Icon" height="22" style="vertical-align: middle; margin-right: 10px;" />
+          Core Values</h2>
         <ul>
           <li>Open science and collaboration</li>
           <li>Digital accessibility</li>
@@ -81,7 +84,8 @@ permalink: /
         </ul>
       </div>
       <div class="vision-block">
-        <h2>🔗 External Resources</h2>
+        <h2><img src="{{ '/assets/images/link_icon.png' | relative_url }}" alt="External Resources Icon" height="22" style="vertical-align: middle; margin-right: 10px;" />
+          External Resources</h2>
         <ul>
           <li>
             <a href="https://github.com/Neureonmindflux-Research-Lab" target="_blank">
