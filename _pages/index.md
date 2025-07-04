@@ -97,8 +97,8 @@ permalink: /
     </li>
     <li>
       <a href="https://zenodo.org/communities/neureonmindflux" target="_blank" class="external-link">
-        <img src="{{ '/assets/images/zenodo_icon_01.png' | relative_url }}" alt="Zenodo" height="20" />
-        Zenodo Archive
+        <img src="{{ '/assets/images/zenodo_icon_01.png' | relative_url }}" alt="Zenodo" height="22" />
+         Archive
       </a>
     </li>
   </ul>
