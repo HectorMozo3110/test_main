@@ -232,8 +232,8 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
   .full-banner-img {
-    max-height: 120px;  
+    max-height: 250px;  
   }
 }
