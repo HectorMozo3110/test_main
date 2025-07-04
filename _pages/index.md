@@ -9,34 +9,43 @@ permalink: /
   <em>Exploring the Power of Applied Artificial Intelligence</em>
 </div>
 
-<div class="fade-up">
-  <p>
-  NeureonMindFlux is a forward-looking research laboratory committed to the advancement of applied artificial intelligence across diverse real-world systems. Our focus spans fields such as space technology, digital health, autonomous systems, educational platforms, and intelligent infrastructure — where AI is not just a tool, but a foundational enabler of meaningful progress.
-  </p>
-</div>
+---
 
-<div class="fade-up">
-  <p>
-  We believe that artificial intelligence will define the fabric of the next technological era — not as an abstract ideal, but as a practical force for global innovation, ethical alignment, and cognitive augmentation. At NeureonMindFlux, we actively explore how AI can be modeled, deployed, and governed in ways that enhance autonomy, adaptability, and trust across human and machine ecosystems.
-  </p>
-</div>
 
-<div class="fade-up">
-  <p>
-  Most importantly, we believe that participation in this new wave of intelligence should not be reserved for those with supercomputers or massive capital. The open digital world has already unlocked access to powerful online tools, collaborative platforms, and modular frameworks that allow any motivated mind to contribute meaningfully to AI research — no matter where they are.
-  </p>
-</div>
+<section class="brain-card-section fade-up">
+  <div class="brain-card-container">
+    <div class="brain-card-text">
+      <h2>🧠 Exploring the Power of Applied Artificial Intelligence</h2>
+      <p>
+        NeureonMindFlux is a forward-looking research laboratory committed to the advancement of applied artificial intelligence across diverse real-world systems. Our focus spans fields such as space technology, digital health, autonomous systems, educational platforms, and intelligent infrastructure — where AI is not just a tool, but a foundational enabler of meaningful progress.
+      </p>
+      <p>
+        We believe that artificial intelligence will define the fabric of the next technological era — not as an abstract ideal, but as a practical force for global innovation, ethical alignment, and cognitive augmentation.
+      </p>
+      <p>
+        Most importantly, we believe that participation in this new wave of intelligence should not be reserved for those with supercomputers or massive capital. The open digital world has already unlocked access to powerful online tools, collaborative platforms, and modular frameworks that allow any motivated mind to contribute meaningfully to AI research — no matter where they are.
+      </p>
+      <ul>
+        <li>Secure and explainable AI architectures</li>
+        <li>Autonomous decision-making agents</li>
+        <li>Neuro-symbolic and cognitive modeling</li>
+        <li>Intelligent sensing and interpretation</li>
+        <li>AI-driven transformation of global industries</li>
+      </ul>
+    </div>
 
-<div class="fade-up">
-  <p>Our work is rooted in building open, impactful systems and publishing frameworks that support:</p>
-  <ul>
-    <li>Secure and explainable AI architectures</li>
-    <li>Autonomous decision-making agents</li>
-    <li>Neuro-symbolic and cognitive modeling</li>
-    <li>Intelligent sensing and interpretation</li>
-    <li>AI-driven transformation of global industries</li>
-  </ul>
-</div>
+    <div class="brain-card-animation">
+      <svg class="brain-svg" viewBox="0 0 100 100">
+        <path
+          d="M10,50 C10,20 90,20 90,50 C90,80 10,80 10,50 Z"
+          fill="none"
+          stroke="#007acc"
+          stroke-width="2"
+        />
+      </svg>
+    </div>
+  </div>
+</section>
 
 ---
 

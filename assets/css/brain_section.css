@@ -1,0 +1,74 @@
+.brain-card-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.brain-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  align-items: center;
+}
+
+.brain-card-text {
+  flex: 1 1 55%;
+  min-width: 300px;
+}
+
+.brain-card-text h2 {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  color: #007acc;
+}
+
+.brain-card-text ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.brain-card-animation {
+  flex: 1 1 35%;
+  text-align: center;
+  min-width: 250px;
+  padding: 20px;
+  background-color: #f3faff;
+  border-radius: 12px;
+}
+
+.brain-svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.brain-svg path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: drawBrain 2.8s ease-out forwards;
+}
+
+@keyframes drawBrain {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
