@@ -88,9 +88,10 @@ permalink: /
           External Resources</h2>
         <ul>
           <li>
-            <a href="https://github.com/Neureonmindflux-Research-Lab" target="_blank">
-              Organization Repo
-            </a>
+            <a href="https://github.com/Neureonmindflux-Research-Lab" target="_blank"
+   style="text-decoration: none; color: #222; font-weight: 500;">
+  Organization Repo
+</a>
           </li>
         </ul>
       </div>
