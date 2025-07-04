@@ -52,7 +52,6 @@
   display: block;
   margin: 0 auto;
   transform-origin: center;
-  animation: pulse 5s ease-in-out infinite;
 }
 
 .brain-path {
@@ -61,7 +60,8 @@
   stroke-dashoffset: 3000;
   animation:
     drawBrain 4s ease-out forwards,
-    glowPulse 2s infinite ease-in-out;
+    complexPulse 6s infinite,
+    colorFlow 10s infinite linear;
   filter: drop-shadow(0 0 4px #00e1ff);
 }
 
@@ -71,10 +71,39 @@
   }
 }
 
-@keyframes glowPulse {
-  0%   { filter: drop-shadow(0 0 0px #00e1ff); }
-  50%  { filter: drop-shadow(0 0 8px #00ffff); }
-  100% { filter: drop-shadow(0 0 0px #00e1ff); }
+/* ⚡ Pulso cerebral complejo: 3 lentos → 10 rápidos → 3 lentos */
+@keyframes complexPulse {
+  0%, 10%   { filter: drop-shadow(0 0 4px #00e1ff); transform: scale(1); }
+  15%       { filter: drop-shadow(0 0 10px #00ffff); transform: scale(1.015); }
+  20%, 25%  { filter: drop-shadow(0 0 6px #00e1ff); transform: scale(1); }
+
+  /* ráfaga rápida de pulsos */
+  30%, 31%  { transform: scale(1.02);  filter: drop-shadow(0 0 12px #00f7ff); }
+  32%, 33%  { transform: scale(1.01);  filter: drop-shadow(0 0 6px #00ccff); }
+  34%, 35%  { transform: scale(1.02);  filter: drop-shadow(0 0 10px #00ffff); }
+  36%, 37%  { transform: scale(1.015); filter: drop-shadow(0 0 8px #00e1ff); }
+  38%, 39%  { transform: scale(1.02);  filter: drop-shadow(0 0 12px #00e1ff); }
+  40%       { transform: scale(1);     filter: drop-shadow(0 0 4px #00ccff); }
+
+  /* 3 lentos */
+  60%, 65%, 70% {
+    transform: scale(1.015);
+    filter: drop-shadow(0 0 8px #00f7ff);
+  }
+
+  80%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px #00e1ff);
+  }
+}
+
+/* 🌈 Flujo de colores eléctricos */
+@keyframes colorFlow {
+  0%   { stroke: #00e1ff; }
+  25%  { stroke: #00ffff; }
+  50%  { stroke: #cc66ff; }
+  75%  { stroke: #ff00cc; }
+  100% { stroke: #00e1ff; }
 }
 
 .fade-up {
@@ -90,7 +119,4 @@
   }
 }
 
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50%     { transform: scale(1.015); }
-}
+
