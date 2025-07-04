@@ -56,15 +56,25 @@
 }
 
 .brain-path {
+  stroke: #00e1ff;
   stroke-dasharray: 3000;
   stroke-dashoffset: 3000;
-  animation: drawBrain 4s ease-out forwards;
+  animation:
+    drawBrain 4s ease-out forwards,
+    glowPulse 2s infinite ease-in-out;
+  filter: drop-shadow(0 0 4px #00e1ff);
 }
 
 @keyframes drawBrain {
   to {
     stroke-dashoffset: 0;
   }
+}
+
+@keyframes glowPulse {
+  0%   { filter: drop-shadow(0 0 0px #00e1ff); }
+  50%  { filter: drop-shadow(0 0 8px #00ffff); }
+  100% { filter: drop-shadow(0 0 0px #00e1ff); }
 }
 
 .fade-up {
