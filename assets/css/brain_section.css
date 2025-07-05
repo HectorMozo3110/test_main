@@ -131,42 +131,54 @@
 
 
 /* ─────────────────────────────────────────────────────────────
-   📱 Brain Section – Safe Responsive Expansion (Mobile Fix)
-   Text pushes container, image flows naturally, no cut-offs.
-   Last updated: 2025-07-05
+   📱 Brain Section – Fixed Layout Like Mission
+   Responsive, flexible width, no overflow
 ───────────────────────────────────────────────────────────── */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .brain-card-container {
     display: block;
     width: 100%;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 40px 20px;
+    background-color: #ffffff;
     border-radius: 16px;
-    background: #ffffff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
   }
 
   .brain-card-text {
+    width: 100%;
     font-size: 1em;
-    padding: 0;
     text-align: justify;
+    padding: 0;
+    box-sizing: border-box;
     word-break: break-word;
     overflow-wrap: break-word;
   }
 
   .brain-card-text h2 {
     font-size: 1.4em;
-    margin-bottom: 20px;
     text-align: center;
+    margin-bottom: 20px;
     color: #007acc;
-    word-break: break-word;
     white-space: normal;
+    word-break: break-word;
+  }
+
+  .brain-card-text p,
+  .brain-card-text ul {
+    text-align: justify;
+    margin-bottom: 1em;
+  }
+
+  .brain-card-text ul {
+    padding-left: 20px;
   }
 
   .brain-card-animation {
-    margin-top: 32px;
+    width: 100%;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,6 +186,7 @@
 
   .brain-card-animation svg {
     max-width: 180px;
+    width: 100%;
     height: auto;
     display: block;
   }
