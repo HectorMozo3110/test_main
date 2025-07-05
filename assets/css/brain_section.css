@@ -137,20 +137,21 @@
 ───────────────────────────────────────────────────────────── */
 @media screen and (max-width: 600px) {
   .brain-card-container {
-    display: flex;
-    flex-direction: column !important;
-    align-items: center;
-    gap: 28px;
-    padding: 32px 18px;
-    margin-top: 28px;
-    margin-bottom: 28px;
-    border-radius: 14px;
-    background: #ffffff;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-    box-sizing: border-box;
-    max-width: 100%;
-    overflow: hidden; /* ✅ Previene cualquier fuga */
-  }
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  gap: 28px;
+  padding: 32px 24px;           /* Aumentamos ligeramente el espacio interior lateral */
+  margin-top: 28px;
+  margin-bottom: 28px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  max-width: calc(100vw - 12px); /* 🔥 Más ancho: antes era 100%, ahora +~2cm visual */
+  overflow: hidden;
+}
+
 
   .brain-card-text {
     width: 100%;
