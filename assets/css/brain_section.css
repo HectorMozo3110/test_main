@@ -130,3 +130,43 @@
 }
 
 
+/* ─────────────────────────────────────────────────────────────
+   📱 Responsive Adjustments – Brain Section (Mobile Devices)
+   Ensures clean layout, readable text, and proper SVG scaling.
+   Last updated: 2025-07-05
+───────────────────────────────────────────────────────────── */
+@media screen and (max-width: 600px) {
+  .brain-card-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .brain-card-text {
+    text-align: center;
+    font-size: 0.95em;
+  }
+
+  .brain-card-text h2 {
+    font-size: 1.2em;
+    white-space: normal; 
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .brain-card-animation {
+    padding: 16px;
+    min-height: 200px;
+  }
+
+  .brain-svg {
+    max-width: 200px;
+  }
+
+  .brain-card-text ul {
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+}
