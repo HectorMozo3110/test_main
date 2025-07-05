@@ -1,32 +1,27 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const githubUser = "HectorMozo3110";
   const menu = document.getElementById("hamburger-menu");
 
   if (!menu) return;
 
   try {
-    const repos = await fetch(`https://api.github.com/users/${githubUser}/repos`).then(res => res.json());
+    const projects = await fetch("/assets/projects.json").then(res => res.json());
     let html = "";
 
-    for (const repo of repos) {
-      const repoName = repo.name;
+    for (const project of projects) {
+      const { name, folder } = project;
 
-      const infoURL = await getDownloadURL(githubUser, repoName, "project_info.md");
-      const versionsURL = await getDownloadURL(githubUser, repoName, "versions.md");
-      const publicationsURL = await getDownloadURL(githubUser, repoName, "publications.md");
+      const basePath = `/papers/${folder}/`;
+
+      const infoURL = await checkFile(basePath + "project_info.md");
+      const versionsURL = await checkFile(basePath + "versions.md");
+      const publicationsURL = await checkFile(basePath + "publications.md");
 
       if (infoURL || versionsURL || publicationsURL) {
-        console.log(`[${repoName}] ✅ Files found:`, {
-          info: !!infoURL,
-          versions: !!versionsURL,
-          publications: !!publicationsURL
-        });
-
-        html += `<div class="project-block"><strong>${repoName}</strong>`;
+        html += `<div class="project-block"><strong>${name}</strong>`;
 
         // 🧪 Project Info
         if (infoURL) {
-          html += `<a href="/test_main/papers/viewer.html?repo=${repoName}">🧪 Project Info</a>`;
+          html += `<a href="/test_main/papers/viewer.html?project=${folder}">🧪 Project Info</a>`;
         }
 
         // 📦 Versions
@@ -63,23 +58,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     menu.innerHTML = `<div style="padding:10px">Error loading menu.</div>`;
   }
 
-  // ✅ Get the download URL from GitHub API (not raw.github)
-  async function getDownloadURL(user, repo, file) {
-    const apiUrl = `https://api.github.com/repos/${user}/${repo}/contents/paper/${file}`;
+  // Verifica si el archivo existe
+  async function checkFile(url) {
     try {
-      const res = await fetch(apiUrl);
-      if (!res.ok) return null;
-      const json = await res.json();
-      return json.download_url || null;
+      const res = await fetch(url);
+      return res.ok ? url : null;
     } catch {
       return null;
     }
   }
 
-  // ✅ Extract links from markdown via direct content
-  async function extractLinks(downloadUrl) {
+  // Extrae links [texto](url) de markdown
+  async function extractLinks(mdUrl) {
     try {
-      const res = await fetch(downloadUrl);
+      const res = await fetch(mdUrl);
       const text = await res.text();
       const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
       const links = [];
@@ -93,7 +85,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // ✅ Toggle visibility of the menu
+  // Muestra / oculta el menú hamburguesa
   window.toggleHamburgerMenu = function () {
     const menu = document.getElementById("hamburger-menu");
     if (menu) {

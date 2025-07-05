@@ -1,0 +1,10 @@
+[
+  {
+    "name": "BB84 Quantum Encryption",
+    "folder": "bb84"
+  },
+  {
+    "name": "Quantum Token Generator",
+    "folder": "token-gen"
+  }
+]

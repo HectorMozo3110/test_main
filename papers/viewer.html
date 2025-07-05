@@ -34,11 +34,15 @@ paper_viewer: true
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" />
 
 <script>
-  const repoName = new URLSearchParams(window.location.search).get("repo");
-  const USER_NAME = "HectorMozo3110";
+  const projectName = new URLSearchParams(window.location.search).get("project");
 
   document.addEventListener("DOMContentLoaded", async () => {
     const container = document.getElementById("paper-page");
+
+    if (!projectName) {
+      container.innerHTML = "<p>❌ Project not specified.</p>";
+      return;
+    }
 
     const md = window.markdownit({
       html: true,
@@ -46,8 +50,8 @@ paper_viewer: true
       typographer: true
     }).use(window.markdownitFootnote);
 
-    const paperUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/project_info.md`;
-
+    const basePath = `/papers/${projectName}/`;
+    const paperUrl = `${basePath}project_info.md`;
 
     try {
       let markdownText = await fetch(paperUrl).then(res => res.text());
@@ -55,7 +59,7 @@ paper_viewer: true
       markdownText = markdownText.replace(
         /!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,
         (match, alt, src, attrs) => {
-          const fullUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/${src}`;
+          const fullUrl = `${basePath}${src}`;
           let style = '';
           if (attrs && attrs.includes("width=")) {
             const width = attrs.match(/width=([0-9]+%?)/)?.[1];
@@ -78,12 +82,12 @@ paper_viewer: true
       });
 
     } catch (err) {
-      container.innerHTML = "<p>❌ Error loading paper.md</p>";
+      container.innerHTML = "<p>❌ Error loading project_info.md</p>";
     }
 
     const bibNames = ["references.bib", "paper.bib", "citations.bib"];
     for (let bibName of bibNames) {
-      const bibUrl = `https://raw.githubusercontent.com/${USER_NAME}/${repoName}/main/paper/${bibName}`;
+      const bibUrl = `${basePath}${bibName}`;
       try {
         const res = await fetch(bibUrl);
         if (!res.ok) continue;
