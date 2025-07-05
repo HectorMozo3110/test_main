@@ -131,31 +131,30 @@
 
 
 /* ─────────────────────────────────────────────────────────────
-   📱 Brain Section – Fully Boxed, Safe Layout (Mobile)
-   Prevents overflow of text/title/image. Layout always contained.
+   📱 Brain Section – Safe Responsive Expansion (Mobile Fix)
+   Text pushes container, image flows naturally, no cut-offs.
    Last updated: 2025-07-05
 ───────────────────────────────────────────────────────────── */
 @media screen and (max-width: 600px) {
   .brain-card-container {
-  display: flex;
-  flex-direction: column !important;
-  align-items: center;
-  gap: 28px;
-  padding: 32px 24px;           /* Aumentamos ligeramente el espacio interior lateral */
-  margin-top: 28px;
-  margin-bottom: 28px;
-  border-radius: 14px;
-  background: #ffffff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-  box-sizing: border-box;
-  max-width: calc(100vw - 12px); /* 🔥 Más ancho: antes era 100%, ahora +~2cm visual */
-  overflow: hidden;
-}
-
+    display: flex;
+    flex-direction: column !important;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 28px;
+    padding: 32px 24px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  }
 
   .brain-card-text {
     width: 100%;
-    max-width: 100%;
     padding: 0 12px;
     font-size: 0.95em;
     text-align: justify;
@@ -165,22 +164,19 @@
   }
 
   .brain-card-text h2 {
-    font-size: 1.3em;
+    font-size: 1.2em; /* 👈 un poco más pequeño */
     text-align: center;
     margin: 0 0 16px;
-    padding: 0;
     line-height: 1.4;
     color: #007acc;
     word-break: break-word;
     white-space: normal;
-    max-width: 100%;
   }
 
   .brain-card-text p,
   .brain-card-text ul {
-    text-align: justify;
     margin-bottom: 1em;
-    overflow-wrap: break-word;
+    text-align: justify;
     word-break: break-word;
   }
 
@@ -195,14 +191,12 @@
     align-items: center;
     padding: 18px;
     box-sizing: border-box;
-    max-width: 100%;
-    overflow: hidden;
   }
 
   .brain-card-animation svg {
     max-width: 180px;
+    width: 100%;
     height: auto;
     display: block;
-    overflow: hidden;
   }
 }
