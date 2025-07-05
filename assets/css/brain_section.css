@@ -131,24 +131,29 @@
 
 
 /* ─────────────────────────────────────────────────────────────
-   📱 Final Mobile Fix – Force brain layout vertical and boxed
-   Fixes image flow, prevents title/text overflow, keeps logic
+   📱 Brain Section – Responsive Logic Like Hero Section
+   Matches visual behavior of .hero-section on small screens.
    Last updated: 2025-07-05
 ───────────────────────────────────────────────────────────── */
 @media screen and (max-width: 600px) {
   .brain-card-container {
     display: flex;
-    flex-direction: column !important;   
+    flex-direction: column !important;
     align-items: stretch;
-    gap: 20px;
-    padding: 38px 20px;
+    gap: 24px;
+    padding: 24px 16px; /* Igual que hero-section */
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
     box-sizing: border-box;
   }
 
   .brain-card-text {
     display: block;
     width: 100%;
-    padding: 0 16px;
+    padding: 0 10px;
     font-size: 0.95em;
     text-align: justify;
     box-sizing: border-box;
@@ -156,12 +161,14 @@
   }
 
   .brain-card-text h2 {
-    font-size: 1.1em;
+    font-size: 1.3em;                  /* Igual que hero-section h1 en móvil */
     text-align: center;
     margin: 0 0 16px;
     padding: 0;
     line-height: 1.4;
     word-break: break-word;
+    white-space: normal;
+    color: #007acc;
   }
 
   .brain-card-text p,
@@ -188,7 +195,4 @@
     height: auto;
   }
 }
-
-
-
 
