@@ -49,3 +49,4 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+force_rebuild: "2025-07-05-13:10"
