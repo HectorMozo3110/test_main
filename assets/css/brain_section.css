@@ -195,10 +195,15 @@
     align-items: center;
   }
 
+
   .brain-card-animation svg {
-    max-width: 180px;
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
 }
