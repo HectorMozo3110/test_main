@@ -131,8 +131,8 @@
 
 
 /* ─────────────────────────────────────────────────────────────
-   📱 Text-Centered Brain Section (Mobile Optimized)
-   Recuadro crece verticalmente si es necesario, sin afectar SVG.
+   📱 Brain Section – Perfect Text Block Alignment (Mobile)
+   Aligns title and text visually inside the container block.
    Last updated: 2025-07-05
 ───────────────────────────────────────────────────────────── */
 @media screen and (max-width: 600px) {
@@ -140,38 +140,40 @@
     flex-direction: column;
     align-items: stretch;
     gap: 20px;
-    padding: 38px 20px; /* +1cm visual aprox */
+    padding: 38px 20px; /* Espacio más amplio, visualmente equilibrado */
   }
 
   .brain-card-text {
-    font-size: 0.95em;
-    text-align: justify;
-    padding: 0 12px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centrado vertical si hay espacio */
-    align-items: center;
+    justify-content: center;
+    align-items: stretch;
+    padding: 0 16px;
+    margin: 0 auto;
+    font-size: 0.95em;
+    text-align: justify;
     width: 100%;
-    min-height: 1px; /* Permite crecer sin romper layout */
+    box-sizing: border-box;
   }
 
   .brain-card-text h2 {
     font-size: 1.1em;
     text-align: center;
-    margin-bottom: 16px;
+    margin: 0 0 16px;
+    padding: 0;
     line-height: 1.4;
     word-break: break-word;
+    color: #007acc;
   }
 
   .brain-card-text p,
   .brain-card-text ul {
     text-align: justify;
+    margin: 0 0 1em;
   }
 
   .brain-card-text ul {
     padding-left: 20px;
-    margin-top: 16px;
   }
 }
 
