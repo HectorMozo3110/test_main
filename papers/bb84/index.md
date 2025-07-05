@@ -11,7 +11,7 @@ This is a demo project used to test the NeureonMindFlux Lab site integration.
 
 It simulates a real research module with links to versions and publications.
 
-![Quantum Diagram](/papers/bb84/figures/diagram.png)
+![Quantum Diagram](/papers/bb84/figures/diagram.jpg)
 
 ## Features
 
