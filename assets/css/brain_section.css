@@ -131,34 +131,37 @@
 
 
 /* ─────────────────────────────────────────────────────────────
-   📱 Responsive Brain Text Block – Styled like Paper Card
-   Matches .paper-card aesthetics for consistency on mobile.
+   📱 Text-Centered Brain Section (Mobile Optimized)
+   Recuadro crece verticalmente si es necesario, sin afectar SVG.
    Last updated: 2025-07-05
 ───────────────────────────────────────────────────────────── */
 @media screen and (max-width: 600px) {
   .brain-card-container {
     flex-direction: column;
-    align-items: center;
-    padding: 25px 20px;
-    gap: 30px;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    align-items: stretch;
+    gap: 20px;
+    padding: 38px 20px; /* +1cm visual aprox */
   }
 
   .brain-card-text {
     font-size: 0.95em;
     text-align: justify;
-    padding: 0 10px;
+    padding: 0 12px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical si hay espacio */
+    align-items: center;
     width: 100%;
+    min-height: 1px; /* Permite crecer sin romper layout */
   }
 
   .brain-card-text h2 {
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-align: center;
     margin-bottom: 16px;
-    color: #007acc;
+    line-height: 1.4;
+    word-break: break-word;
   }
 
   .brain-card-text p,
@@ -170,8 +173,8 @@
     padding-left: 20px;
     margin-top: 16px;
   }
-
 }
+
 
 
 
