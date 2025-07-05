@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Quantum Token Generator
-permalink: /papers/token-gen/project-info
 ---
+
 
 
 
