@@ -179,7 +179,7 @@
 
   .brain-card-text p,
   .brain-card-text ul {
-    text-align: justify;
+    text-align: left;
     margin-bottom: 1em;
   }
 
