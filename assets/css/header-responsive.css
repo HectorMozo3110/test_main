@@ -1,0 +1,53 @@
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #007acc;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px;
+    height: auto;
+    gap: 12px;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: center;
+    padding-right: 0;
+    display: none;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lab-centered-icons {
+    order: 2;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .lab-brand {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+}
