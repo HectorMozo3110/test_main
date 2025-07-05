@@ -378,13 +378,14 @@ footer {
   }
 
   .hero-section h1 {
-    font-size: 1.6em;
+    font-size: 1.3em;        
     line-height: 1.4;
     word-break: break-word;
+    white-space: normal;
   }
 
   .hero-section em {
-    font-size: 1em;
+    font-size: 0.95em;
     line-height: 1.5;
     opacity: 0.9;
   }
