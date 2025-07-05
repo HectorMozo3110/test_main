@@ -1,3 +1,38 @@
+/* ─────────────────────────────────────────────────────────────
+   📦 Header Full Width Wrapper – Like Brain & Mission
+   Ensures full alignment across all screen sizes
+   Last updated: 2025-07-05
+───────────────────────────────────────────────────────────── */
+.header-wrapper {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   🧭 Header Container Layout
+   Wraps all content in a centered max-width area
+───────────────────────────────────────────────────────────── */
+.header-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   🍔 Mobile Menu Toggle Button
+   Appears only on small screens
+───────────────────────────────────────────────────────────── */
 .menu-toggle {
   display: none;
   font-size: 1.6rem;
@@ -9,16 +44,16 @@
 
 /* ─────────────────────────────────────────────────────────────
    🔽 Responsive Header Container – Mobile (Extra Padding)
-   Makes the header slightly taller and spaced on small screens.
+   Makes the header slightly taller and stacked in mobile
    Last updated: 2025-07-05
 ───────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .header-container {
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 28px 20px;         
+    padding: 28px 20px;
     height: auto;
-    gap: 16px;                 
+    gap: 16px;
   }
 
   .main-nav {
