@@ -1,3 +1,11 @@
+---
+layout: default
+title: Quantum Token Generator
+permalink: /papers/token-gen/project-info
+---
+
+
+
 # Test Project 33
 
 This is a demo project used to test the NeureonMindFlux Lab site integration.
