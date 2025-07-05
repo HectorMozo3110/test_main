@@ -188,22 +188,24 @@
   }
 
   .brain-card-animation {
-    width: 100%;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f3faff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
-
-  .brain-card-animation svg {
+.brain-card-animation svg {
   max-width: 100%;
-  width: auto;
   height: auto;
   display: block;
   margin: 0 auto;
   box-sizing: border-box;
-  overflow: hidden;
+  padding: 0;
 }
 
 }
