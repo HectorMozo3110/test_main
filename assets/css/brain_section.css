@@ -132,13 +132,24 @@
 
 /* ─────────────────────────────────────────────────────────────
    📱 Brain Section – Fixed Layout Like Mission
-   Responsive, flexible width, no overflow
+   Responsive, full-width, no overflow or margin issues
+   Last updated: 2025-07-05
 ───────────────────────────────────────────────────────────── */
 @media screen and (max-width: 768px) {
+  .brain-card-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 60px 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
   .brain-card-container {
     display: block;
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
     background-color: #ffffff;
