@@ -16,9 +16,9 @@
   .header-container {
     flex-wrap: wrap;
     flex-direction: column;
-    padding: 28px 20px;         /* 👈 Antes: 20px → Ahora: 28px vertical */
+    padding: 28px 20px;         
     height: auto;
-    gap: 16px;                  /* 👈 Antes: 12px → Ahora: 16px entre elementos */
+    gap: 16px;                 
   }
 
   .main-nav {
