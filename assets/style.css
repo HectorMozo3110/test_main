@@ -457,6 +457,15 @@ footer {
 
 
 
+.explore-links a {
+  color: #555 !important; 
+  text-decoration: none;
+}
+
+.explore-links a:hover {
+  color: #000 !important;  
+  text-decoration: underline;
+}
 
 
 
