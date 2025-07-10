@@ -432,4 +432,27 @@ footer {
 
 
 
+@media (max-width: 768px) {
+  .lab-centered-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .lab-centered-icons a img {
+    height: 48px !important;
+  }
+
+  .lab-centered-icons div {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  .lab-centered-icons span {
+    font-size: 0.85rem;
+  }
+}
+
+
 
