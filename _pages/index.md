@@ -173,12 +173,97 @@ permalink: /
             </div>
     </div>
   </div>
+      <!-- Block: AI-Enhanced Cybersecurity Systems -->
+      <div class="vision-block">
+        <h2>🔐 AI-Enhanced Cybersecurity Systems (Current Capabilities)</h2>
+        <img src="{{ '/assets/images/ai_cybersecurity_current.png' | relative_url }}" alt="AI Cybersecurity Current" 
+            style="border-radius: 12px; width: 100%; max-width: 600px; display: block; margin: 1rem auto;" />
+        <p>
+          Artificial Intelligence is currently transforming how cyber defense systems detect, classify, and respond to threats.
+          Some of the most impactful applications include:
+        </p>
+        <ul>
+          <li><strong>Anomaly Detection:</strong> AI models learn baseline behaviors in networks and identify anomalies, even those unknown to traditional systems.</li>
+          <li><strong>Malware Classification:</strong> Deep learning classifiers detect novel malware variants at high accuracy without signature reliance.</li>
+          <li><strong>Phishing Recognition:</strong> NLP models identify social engineering attempts in emails, messages, and fake websites.</li>
+          <li><strong>Threat Intelligence Analysis:</strong> AI correlates vast streams of cyber threat indicators across sources to anticipate coordinated attacks.</li>
+          <li><strong>Adaptive Intrusion Detection Systems (IDS):</strong> These systems self-tune based on user behavior and evolving attack patterns.</li>
+        </ul>
+        <p><strong>Explore more:</strong></p>
+        <div class="explore-links">
+          <ul>
+            <li>🌐 <a href="https://www.ciab.com/resources/ai-detects-cyber-attacks-accuracy-attending-mit/" target="_blank">MIT CSAIL – AI for Cybersecurity</a></li>
+            <li>🌐 <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank">NIST – AI for Cybersecurity Framework</a></li>
+            <li>🌐 <a href="https://news.microsoft.com/cyber-signals/" target="_blank">Microsoft – Cyber Signals Report</a></li>
+            <li>🌐 <a href="https://www.ibm.com/security/artificial-intelligence" target="_blank">IBM – Watson for Cybersecurity</a></li>
+            <li>🌐 <a href="https://www.cisa.gov/ai" target="_blank">CISA – AI Use Cases in Threat Detection</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Block: Next-Gen AI-Driven Cyber Defense -->
+    <div class="vision-block">
+      <h2>🔮 Next-Gen AI-Driven Cyber Defense (Future Directions)</h2>
+      <img src="{{ '/assets/images/ai_cybersecurity_future.png' | relative_url }}" alt="AI Cybersecurity Future" 
+          style="border-radius: 12px; width: 100%; max-width: 600px; display: block; margin: 1rem auto;" />
+      <p>
+        Future cyber defense architectures are expected to shift toward fully autonomous, proactive, and ethically adaptive systems. Anticipated innovations include:
+      </p>
+      <ul>
+        <li><strong>Autonomous Cyber Agents:</strong> Self-operating systems capable of identifying, isolating, and remediating threats in real-time.</li>
+        <li><strong>Neuro-symbolic Reasoning:</strong> Hybrid models that combine symbolic logic with deep learning to interpret adversarial intent.</li>
+        <li><strong>Quantum-Resistant AI Security:</strong> Integration of AI with post-quantum cryptography to safeguard against future quantum attacks.</li>
+        <li><strong>Zero Trust Adaptive Defense:</strong> AI-managed identity, access control, and behavioral authentication under dynamic Zero Trust models.</li>
+        <li><strong>Cognitive Deception Networks:</strong> Systems that use AI to actively deceive attackers, generating fake data trails and honeynets.</li>
+      </ul>
+      <p><strong>Explore more:</strong></p>
+      <div class="explore-links">
+        <ul>
+          <li>🌐 <a href="https://www.darpa.mil/news-events/2023-08-09" target="_blank">DARPA – AI Cyber Challenge (AIxCC)</a></li>
+          <li>🌐 <a href="https://www.enisa.europa.eu/publications/artificial-intelligence-cybersecurity-challenges" target="_blank">ENISA – AI Threat Landscape</a></li>
+          <li>🌐 <a href="https://www.nccoe.nist.gov/ai/adversarial-machine-learning" target="_blank">NIST – Adversarial Machine Learning Workshop</a></li>
+          <li>🌐 <a href="https://atlas.mitre.org/" target="_blank">MITRE ATLAS – Adversarial Threat Landscape for AI</a></li>
+          <li>🌐 <a href="https://uk.newsroom.ibm.com/2017-02-13-IBM-Delivers-Watson-for-Cyber-Security-to-Power-Cognitive-Security-Operations-Centers" target="_blank">IBM – Vision for Cognitive Security</a></li>
+        </ul>
+      </div>
+    </div>
+      <!-- Block: Decentralized AI for Global Collaboration -->
+      <div class="vision-block">
+        <h2>
+          🔄 AI for Decentralized Collaboration and Global Equity
+        </h2>
+        <img src="{{ '/assets/images/ai_decentralized_collab.png' | relative_url }}" alt="Decentralized AI" 
+          style="border-radius: 12px; width: 100%; max-width: 600px; display: block; margin: 1rem auto;" />
+        <p>
+          Modern artificial intelligence is moving beyond centralized, monolithic models. <strong>Federated and decentralized learning</strong>
+          allows multiple agents — across institutions or geographies — to collaboratively train AI systems <em>without sharing raw data</em>.
+        </p>
+        <ul>
+          <li><strong>In medicine:</strong> Hospitals across continents share insights while protecting patient privacy</li>
+          <li><strong>In education:</strong> Schools adapt intelligent platforms locally while improving global models</li>
+          <li><strong>In underserved regions:</strong> Low-infrastructure systems contribute to and benefit from global AI networks</li>
+        </ul>
+        <p>
+          These architectures promote <strong>inclusivity, privacy, and resilience</strong>, empowering broader participation in the development of intelligent systems.
+          They embody the spirit of global AI collaboration — one that transcends borders, capital, and compute power.
+        </p>
+        <p><strong>Explore more:</strong></p>
+        <div class="explore-links">
+          <ul>
+            <li>🌐 <a href="https://ai.googleblog.com/2017/04/federated-learning-collaborative.html" target="_blank">Google – Federated Learning Framework</a></li>
+            <li>🌐 <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank">NIST – AI Risk Management for Decentralized Systems</a></li>
+            <li>🌐 <a href="https://openmined.org/blog/privacy-preserving-ai-summary-part-2-mit-deep-learning-series/" target="_blank">OpenMined – Privacy-Preserving AI Research</a></li>
+            <li>🌐 <a href="https://www.who.int/news/item/18-01-2024-who-releases-ai-ethics-and-governance-guidance-for-large-multi-modal-models" target="_blank">WHO – AI in Healthcare and Data Ethics</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
+
+
 </section>
-
-
-
-
-
 
 
 
