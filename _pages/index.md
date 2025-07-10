@@ -241,11 +241,8 @@ permalink: /
 <section class="mission-vision-section fade-up">
   <div class="mission-vision-container">
     <div class="mission-vision-grid">
-      <!-- Block: Decentralized AI for Global Collaboration -->
-      <div class="vision-block">
+      <div class="mission-block">
         <h2>🔄 AI for Decentralized Collaboration and Global Equity</h2>
-        <img src="{{ '/assets/images/ai_decentralized_collab.png' | relative_url }}" alt="Decentralized AI"
-             style="border-radius: 12px; width: 100%; max-width: 600px; display: block; margin: 1rem auto;" />
         <p>
           Modern artificial intelligence is moving beyond centralized, monolithic models.
           <strong>Federated and decentralized learning</strong> allows multiple agents — across institutions or geographies —
@@ -270,10 +267,15 @@ permalink: /
             <li>🌐 <a href="https://www.who.int/news/item/18-01-2024-who-releases-ai-ethics-and-governance-guidance-for-large-multi-modal-models" target="_blank">WHO – AI in Healthcare and Data Ethics</a></li>
           </ul>
         </div>
+      </div> <!-- /.mission-block -->
+      <div class="vision-block">
+        <img src="{{ '/assets/images/ai_decentralized_collab.png' | relative_url }}" alt="Decentralized AI"
+             style="border-radius: 12px; width: 100%; max-width: 600px; display: block; margin: 1rem auto;" />
       </div> <!-- /.vision-block -->
     </div> <!-- /.mission-vision-grid -->
   </div> <!-- /.mission-vision-container -->
 </section> <!-- /.mission-vision-section -->
+
 
 
 <section class="mission-vision-section fade-up">
