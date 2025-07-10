@@ -376,10 +376,12 @@ permalink: /
           <li>Transparent communication and constructive feedback</li>
           <li>Academic integrity and acknowledgment of contributions</li>
         </ul>
+        <div class= "explore-links">
         <p>
           📄 Read the full policy here:
-          <a class= "explore-links" href="{{ '/code-of-conduct/' | relative_url }}" target="_blank">View Full Code of Conduct</a>
+          <a href="{{ '/code-of-conduct/' | relative_url }}" target="_blank">View Full Code of Conduct</a>
         </p>
+        </div>
       </div> <!-- /.vision-block -->
     </div> <!-- /.mission-vision-grid -->
   </div> <!-- /.mission-vision-container -->
