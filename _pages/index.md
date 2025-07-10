@@ -141,7 +141,7 @@ permalink: /
               <!-- Block: Future AGI Vision -->
             <div class="vision-block">
               <h2>
-                🌌 Future Directions in Reflective and Adaptive Intelligence
+                🧭 Future Directions in Reflective and Adaptive Intelligence
               </h2>
               <img src="{{ '/assets/images/future_agi_architectures.png' | relative_url }}" alt="Future AGI Architectures" 
                   style="border-radius: 12px; width: 100%; max-width: 600px; display: block; margin: 1rem auto;" />
