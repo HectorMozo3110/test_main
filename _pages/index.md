@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <div class="fade-up hero-section">
-  <h1>🧠 Welcome to NeureonMindFlux Research Lab</h1>
+  <h1> Welcome to NeureonMindFlux Research Lab</h1>
   <em>Exploring the Power of Applied Artificial Intelligence</em>
 </div>
 
@@ -39,6 +39,65 @@ permalink: /
 
   </div>
 </section>
+
+<section class="mission-vision-section fade-up">
+  <div class="mission-vision-container">
+    <div class="mission-vision-grid">
+      <!-- Block: Space AI -->
+      <div class="mission-block">
+        <h2>
+          <img src="{{ '/assets/images/satellite_icon.png' | relative_url }}" alt="AI Space Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
+          Artificial Intelligence in Space Systems
+        </h2>
+        <p>
+          <strong>Artificial Intelligence (AI)</strong> is already playing a critical role in modern space missions and satellite-based technologies. 
+          Leading agencies such as <strong>NASA</strong> and <strong>ESA</strong> have actively integrated AI into operations involving:
+        </p>
+        <ul>
+          <li><strong>Autonomous spacecraft navigation</strong></li>
+          <li><strong>Space weather prediction and risk mitigation</strong></li>
+          <li><strong>Fault detection and system health monitoring</strong></li>
+        </ul>
+        <p>
+          At the forefront of this integration is <strong>NASA’s Frontier Development Lab</strong>, where AI systems are being applied to address high-stakes challenges such as 
+          <strong>asteroid trajectory prediction</strong>, <strong>planetary surface mapping</strong>, and <strong>solar storm forecasting</strong>. 
+          These applications highlight how AI enables <em>real-time decision-making</em> in environments where human latency is a limiting factor, 
+          such as <strong>deep space</strong> or <strong>autonomous satellite constellations</strong>.
+        </p>
+      </div>
+      <!-- Block: Future Space AI Vision -->
+      <div class="vision-block">
+        <h2>
+          <img src="{{ '/assets/images/future_icon.png' | relative_url }}" alt="Future Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
+          Vision for Future AI-Driven Space Architectures
+        </h2>
+        <p>
+          Looking ahead, <strong>AI</strong> is expected to become a foundational component of future space architectures. 
+          Potential developments include:
+        </p>
+        <ul>
+          <li><strong>Autonomous spacecraft systems</strong> capable of introspective diagnostics, dynamic goal management, and mission adaptation</li>
+          <li><strong>Swarm intelligence in LEO networks</strong> for cooperative behavior and self-healing constellations</li>
+          <li><strong>AI-driven mission planning</strong> using orbital mechanics, fuel optimization, and risk modeling</li>
+          <li><strong>Onboard continual learning models</strong> that adapt sensor usage and behavior in interplanetary contexts</li>
+        </ul>
+        <p>
+          These systems will be essential to support <strong>long-duration missions</strong>, <strong>Lagrangian point observatories</strong>, and 
+          <strong>planetary exploration</strong>, especially in environments where <em>communication latency</em> makes Earth-based intervention impractical.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 
 
 
