@@ -459,44 +459,34 @@ footer {
 
 
 
-.navbar a {
-  position: relative;
-  color: #003366; 
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-  z-index: 1;
-}
 
-.navbar a::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120%;
-  height: 140%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(0,119,153,0.3), rgba(0,51,102,0.2)); 
-  filter: blur(8px);
-  opacity: 0.9;
-  animation: electric-glow 2s infinite alternate;
-  z-index: -1;
+.main-nav {
+  box-shadow:
+    0 0 12px rgba(0, 255, 255, 0.3),
+    0 0 24px rgba(0, 255, 255, 0.2);
+  padding: 8px 16px;
   border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05); 
 }
 
-.navbar a:hover {
-  color: #007799; 
+
+.nav-links a {
+  position: relative;
+  color: #00caff;
+  text-decoration: none;
+  font-weight: 500;
+  text-shadow:
+    0 0 4px #003366,
+    0 0 10px #004466,
+    0 0 14px #00e0ff;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-@keyframes electric-glow {
-  0% {
-    box-shadow: 0 0 5px #003366, 0 0 10px #005577, 0 0 15px #007799;
-  }
-  50% {
-    box-shadow: 0 0 10px #004466, 0 0 20px #006688, 0 0 25px #0088aa;
-  }
-  100% {
-    box-shadow: 0 0 5px #002244, 0 0 15px #004466, 0 0 20px #006699;
-  }
-}
 
+.nav-links a:hover {
+  color: #88f6ff;
+  text-shadow:
+    0 0 6px #004466,
+    0 0 14px #00eaff,
+    0 0 22px #66ffff;
+}
