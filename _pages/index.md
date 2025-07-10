@@ -63,6 +63,12 @@ permalink: /
           These applications highlight how AI enables <em>real-time decision-making</em> in environments where human latency is a limiting factor, 
           such as <strong>deep space</strong> or <strong>autonomous satellite constellations</strong>.
         </p>
+        <p><strong>Explore more:</strong></p>
+              <ul>
+                <li>🌐 <a href="https://frontierdevelopmentlab.org/" target="_blank">NASA – Frontier Development Lab</a></li>
+                <li>🌐 <a href="https://www.nasa.gov/centers-and-facilities/goddard/ai-could-speed-fault-diagnosis/" target="_blank">NASA Fault Detection Systems</a></li>
+                <li>🌐 <a href="https://www.esa.int/Enabling_Support/Operations/OPS-SAT" target="_blank">ESA OPS-SAT Mission</a></li>
+              </ul>
          <img src="{{ '/assets/images/satellite_icon.png' | relative_url }}" alt="AI Space Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
       </div>
       <!-- Block: Future Space AI Vision -->
@@ -84,6 +90,13 @@ permalink: /
           These systems will be essential to support <strong>long-duration missions</strong>, <strong>Lagrangian point observatories</strong>, and 
           <strong>planetary exploration</strong>, especially in environments where <em>communication latency</em> makes Earth-based intervention impractical.
         </p>
+        <p><strong>Explore more:</strong></p>
+                  <ul>
+                    <li>🌐 <a href="https://www.nasa.gov/mission/starling/" target="_blank">NASA Starling Mission – Swarm AI</a></li>
+                    <li>🌐 <a href="https://www.esa.int/Enabling_Support/Preparing_for_the_Future/Discovery_and_Preparation/Artificial_intelligence_in_space" target="_blank">ESA – AI and Machine Learning for Space Operations</a></li>
+                    <li>🌐 <a href="https://ntrs.nasa.gov/citations/20250000634" target="_blank">NASA – Deep Reinforcement Learning for Autonomous Navigation</a></li>
+                    <li>🌐 <a href="https://connectivity.esa.int/projects/healthai" target="_blank">ESA TELEMAC Project – AI for Satellite Health Management</a></li>
+                  </ul>
          <img src="{{ '/assets/images/future_icon.png' | relative_url }}" alt="Future Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
       </div>
     </div>
