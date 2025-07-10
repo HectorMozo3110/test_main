@@ -378,7 +378,7 @@ permalink: /
         </ul>
         <p>
           📄 Read the full policy here:
-          <a href="{{ '/code-of-conduct/' | relative_url }}" target="_blank">View Full Code of Conduct</a>
+          <a class= "explore-links" href="{{ '/code-of-conduct/' | relative_url }}" target="_blank">View Full Code of Conduct</a>
         </p>
       </div> <!-- /.vision-block -->
     </div> <!-- /.mission-vision-grid -->
