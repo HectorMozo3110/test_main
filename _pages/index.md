@@ -353,3 +353,34 @@ permalink: /
     </div> <!-- /.mission-vision-grid -->
   </div> <!-- /.mission-vision-container -->
 </section> <!-- /.mission-vision-section -->
+
+
+<section class="mission-vision-section fade-up">
+  <div class="mission-vision-container">
+    <div class="mission-vision-grid">
+      <div class="mission-block">
+        <img src="{{ '/assets/images/conduct_icon.png' | relative_url }}"
+             alt="Contributor Conduct Icon"
+             style="border-radius: 12px; width: 100%; max-width: 500px; display: block; margin: 1rem auto;" />
+      </div> <!-- /.mission-block -->
+      <div class="vision-block">
+        <h2>🤝 Contributor Code of Conduct</h2>
+        <p>
+          At Neureonmindflux Lab, we are committed to fostering an open, safe, and inclusive research community.
+          Our <strong>Code of Conduct</strong> outlines the principles that guide all contributors and collaborators.
+        </p>
+        <ul>
+          <li>Respect and inclusion across all levels of collaboration</li>
+          <li>Commitment to ethical, responsible, and open science</li>
+          <li>Zero tolerance for discrimination or harassment</li>
+          <li>Transparent communication and constructive feedback</li>
+          <li>Academic integrity and acknowledgment of contributions</li>
+        </ul>
+        <p>
+          📄 Read the full policy here:
+          <a href="{{ '/code-of-conduct/' | relative_url }}" target="_blank">View Full Code of Conduct</a>
+        </p>
+      </div> <!-- /.vision-block -->
+    </div> <!-- /.mission-vision-grid -->
+  </div> <!-- /.mission-vision-container -->
+</section> <!-- /.mission-vision-section -->
