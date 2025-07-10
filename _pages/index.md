@@ -35,10 +35,11 @@ permalink: /
    <div class="brain-card-animation">
   {% include brain.html %}
 </div>
-
-
-  </div>
+</div>
 </section>
+
+
+
 
 <section class="mission-vision-section fade-up">
   <div class="mission-vision-container">
@@ -105,6 +106,12 @@ permalink: /
                   </ul>
                   </div>
       </div>
+      </div>
+      </div>
+    </section>
+      <section class="mission-vision-section fade-up">
+  <div class="mission-vision-container">
+    <div class="mission-vision-grid">
                 <!-- Block: Current AGI Systems -->
               <div class="mission-block">
                 <h2>
@@ -171,8 +178,11 @@ permalink: /
                 </ul>
               </div>
             </div>
-    </div>
   </div>
+</section>
+  <section class="mission-vision-section fade-up">
+  <div class="mission-vision-container">
+    <div class="mission-vision-grid">
       <!-- Block: AI-Enhanced Cybersecurity Systems -->
       <div class="vision-block">
         <h2>🔐 AI-Enhanced Cybersecurity Systems (Current Capabilities)</h2>
@@ -226,6 +236,11 @@ permalink: /
         </ul>
       </div>
     </div>
+    </section>
+
+   <section class="mission-vision-section fade-up">
+  <div class="mission-vision-container">
+    <div class="mission-vision-grid">
       <!-- Block: Decentralized AI for Global Collaboration -->
       <div class="vision-block">
         <h2>
@@ -256,13 +271,6 @@ permalink: /
           </ul>
         </div>
       </div>
-
-
-
-
-
-
-
 </section>
 
 
