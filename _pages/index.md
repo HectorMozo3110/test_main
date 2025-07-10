@@ -105,6 +105,72 @@ permalink: /
                   </ul>
                   </div>
       </div>
+                <!-- Block: Current AGI Systems -->
+              <div class="mission-block">
+                <h2>
+                  🧠 Advanced Artificial Intelligence 
+                </h2>
+                <img src="{{ '/assets/images/current_agi_systems.png' | relative_url }}" alt="Current AGI Systems" 
+                    style="border-radius: 12px; width: 100%; max-width: 600px; display: block; margin: 1rem auto;" />
+                <p>
+                  Advanced AI systems are moving beyond narrow task optimization to include <strong>self-awareness</strong>, 
+                  <strong>meta-learning</strong>, and <strong>adaptive control</strong>. Some of the most notable architectures and projects include:
+                </p>
+                <ul>
+                  <li><strong>OpenAI’s GPT-4</strong> – multimodal reasoning across broad contexts</li>
+                  <li><strong>DeepMind’s Gato</strong> – a single agent trained across multiple tasks and modalities</li>
+                  <li><strong>Meta’s CICERO</strong> – language + negotiation reasoning in the Diplomacy game</li>
+                  <li><strong>Stanford Self-Reflective LLMs</strong> – models that critique and refine their own outputs</li>
+                  <li><strong>Voyager (Berkeley)</strong> – embodied agent that learns continually in Minecraft</li>
+                </ul>
+                <p>
+                  These systems represent foundational steps toward <strong>autonomous decision-making</strong>, 
+                  <strong>self-evaluation</strong>, and <strong>long-range planning</strong> in cognitive architectures.
+                </p>
+                <p><strong>Explore more:</strong></p>
+                <div class="explore-links">
+                  <ul>
+                    <li>🌐 <a href="https://openai.com/research/gpt-4" target="_blank">OpenAI – GPT-4 Technical Report</a></li>
+                    <li>🌐 <a href="https://deepmind.google/discover/blog/a-generalist-agent/" target="_blank">DeepMind – Gato</a></li>
+                    <li>🌐 <a href="https://ai.meta.com/research/cicero/" target="_blank">Meta AI – CICERO</a></li>
+                    <li>🌐 <a href="https://voyager.minedojo.org/" target="_blank">Voyager – Continual Learning Agent</a></li>
+                    <li>🌐 <a href="https://hai.stanford.edu/news/ai-agents-self-reflect-perform-better-changing-environments" target="_blank">Stanford – Self-Reflective LLMs</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Block: Future AGI Vision -->
+            <div class="vision-block">
+              <h2>
+                🌌 Future Directions in Reflective and Adaptive Intelligence
+              </h2>
+              <img src="{{ '/assets/images/future_agi_architectures.png' | relative_url }}" alt="Future AGI Architectures" 
+                  style="border-radius: 12px; width: 100%; max-width: 600px; display: block; margin: 1rem auto;" />
+              <p>
+                Looking forward, cognitive AI is expected to evolve toward <strong>self-reflective architectures</strong>, 
+                <strong>autonomous motivation</strong>, and <strong>moral alignment frameworks</strong>. Anticipated capabilities include:
+              </p>
+              <ul>
+                <li><strong>Self-modeling AGI</strong> that monitors and adjusts its internal cognitive states</li>
+                <li><strong>Ethical reasoning modules</strong> for alignment with human values</li>
+                <li><strong>Autotelic agents</strong> with internal goal generation and priority management</li>
+                <li><strong>Causal reasoning & analogical inference</strong> for abstract generalization</li>
+                <li><strong>Hierarchical memory & continual learning</strong> with self-alignment</li>
+              </ul>
+              <p>
+                These architectures will be key in building <strong>safe, autonomous, and interpretable AGI systems</strong> 
+                capable of adapting ethically across complex environments.
+              </p>
+              <p><strong>Explore more:</strong></p>
+              <div class="explore-links">
+                <ul>
+                  <li>🌐 <a href="https://www.csail.mit.edu/news/robots-know-themselves-mits-vision-based-system-teaches-machines-understand-their-bodies" target="_blank">MIT CSAIL – Self-Aware AI Architectures</a></li>
+                  <li>🌐 <a href="https://www.goodai.com/" target="_blank">GoodAI – Cognitive Architectures</a></li>
+                  <li>🌐 <a href="https://www.pandcglobal.com/research-insights/strategic-foresight-preparing-for-an-agi-transformed-future/" target="_blank">Strategic Foresight: Preparing for an AGI-Transformed Future</a></li>
+                  <li>🌐 <a href="https://bair.berkeley.edu/blog/" target="_blank">Berkeley – Autotelic Agents</a></li>
+                  <li>🌐 <a href="https://hyperon.opencog.org/" target="_blank">OpenCog Hyperon – Symmetric Cognition Systems</a></li>
+                </ul>
+              </div>
+            </div>
     </div>
   </div>
 </section>
