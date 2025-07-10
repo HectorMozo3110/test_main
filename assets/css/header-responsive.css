@@ -1,0 +1,130 @@
+/* ─────────────────────────────────────────────────────────────
+   📦 Header Full Width Wrapper – Like Brain & Mission
+   Ensures full alignment across all screen sizes
+   Last updated: 2025-07-05
+───────────────────────────────────────────────────────────── */
+.header-wrapper {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 20px 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   🧭 Header Container Layout
+   Wraps all content in a centered max-width area
+───────────────────────────────────────────────────────────── */
+.header-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   🍔 Mobile Menu Toggle Button
+   Appears only on small screens
+───────────────────────────────────────────────────────────── */
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+  color: #007acc;
+  cursor: pointer;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   🔽 Responsive Header Container – Mobile (Extra Padding)
+   Makes the header slightly taller and stacked in mobile
+   Last updated: 2025-07-05
+───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 28px 20px;
+    height: auto;
+    gap: 16px;
+  }
+
+  .main-nav {
+    width: 100%;
+    justify-content: center;
+    padding-right: 0;
+    display: none;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .lab-centered-icons {
+    order: 2;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .lab-brand {
+    order: 1;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+  }
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   ⚡ Enhanced Mobile Navigation – Electric List Style
+   Makes nav items look like glowing touch areas
+   Last updated: 2025-07-05
+───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 12px 20px;
+    background: #f4faff;
+    border: 2px solid #00bfff;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #007acc;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 0 0px transparent;
+    transition: all 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    background-color: #e6f7ff;
+    color: #005fa3;
+    box-shadow: 0 0 12px #00d0ff, 0 0 24px #00eaff inset;
+    transform: scale(1.02);
+    text-decoration: none; 
+
+  }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+  {% if page.url == "/" %}
+  <div class="lab-banner-full">
+    <img src="{{ '/assets/images/banner_lab.png' | relative_url }}" alt="NeureonMindFlux Banner" class="full-banner-img" />
+  </div>
+{% endif %}
+
+ <main id="main-content">
+  {% if page.article %}
+    <div class="outer-wrapper">
+      <div class="article-body">
+        {{ content }}
+      </div>
+    </div>
+  {% else %}
+    {{ content }}
+  {% endif %}
+
+  <!-- Dynamically loaded markdown content from GitHub -->
+  <div id="content-area" style="padding: 20px; max-width: 900px; margin: 0 auto;"></div>
+</main>
+
+    {% include footer.html %}
+  </body>
+</html>

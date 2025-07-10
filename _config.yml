@@ -1,0 +1,33 @@
+# GitHub Pages URL settings
+baseurl: ""  
+url: "https://neureonmindfluxlab.org"
+
+
+# Markdown engine and theme
+markdown: kramdown
+theme: minima
+
+# Folders/files that must be included in the build
+include:
+  - assets
+  - papers
+
+# Treat _pages as standalone content
+collections:
+  pages:
+    output: true
+
+# Default layout for all Markdown pages
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
+# Optional Jekyll options
+safe: true
+future: true
+
+plugins:
+  - jekyll-sitemap

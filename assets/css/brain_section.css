@@ -1,0 +1,211 @@
+.brain-card-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.brain-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  align-items: center;
+}
+
+.brain-card-text {
+  flex: 1 1 55%;
+  min-width: 300px;
+}
+
+.brain-card-text h2 {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  color: #007acc;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.brain-card-text ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.brain-card-animation {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  padding: 20px;
+  background-color: #f3faff;
+  border-radius: 12px;
+  min-height: 300px;
+}
+
+.brain-svg {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+  transform-origin: center;
+}
+
+.brain-path {
+  stroke: #00e1ff;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation:
+    infiniteDraw 14s linear infinite,
+    complexPulse 6s infinite,
+    colorFlow 10s infinite linear;
+  filter: drop-shadow(0 0 4px #00e1ff);
+}
+
+
+@keyframes infiniteDraw {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  40% {
+    stroke-dashoffset: 0;
+  }
+  60% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 600;
+  }
+}
+
+
+@keyframes complexPulse {
+  0%, 10%   { filter: drop-shadow(0 0 4px #00e1ff); transform: scale(1); }
+  15%       { filter: drop-shadow(0 0 10px #00ffff); transform: scale(1.015); }
+  20%, 25%  { filter: drop-shadow(0 0 6px #00e1ff); transform: scale(1); }
+
+  30%, 31%  { transform: scale(1.02);  filter: drop-shadow(0 0 12px #00f7ff); }
+  32%, 33%  { transform: scale(1.01);  filter: drop-shadow(0 0 6px #00ccff); }
+  34%, 35%  { transform: scale(1.02);  filter: drop-shadow(0 0 10px #00ffff); }
+  36%, 37%  { transform: scale(1.015); filter: drop-shadow(0 0 8px #00e1ff); }
+  38%, 39%  { transform: scale(1.02);  filter: drop-shadow(0 0 12px #00e1ff); }
+  40%       { transform: scale(1);     filter: drop-shadow(0 0 4px #00ccff); }
+
+  60%, 65%, 70% {
+    transform: scale(1.015);
+    filter: drop-shadow(0 0 8px #00f7ff);
+  }
+
+  80%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px #00e1ff);
+  }
+}
+
+
+@keyframes colorFlow {
+  0%   { stroke: #00e1ff; }
+  25%  { stroke: #00ffff; }
+  50%  { stroke: #cc66ff; }
+  75%  { stroke: #ff00cc; }
+  100% { stroke: #00e1ff; }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ─────────────────────────────────────────────────────────────
+   📱 Brain Section – Fixed Layout Like Mission
+   Responsive, full-width, no overflow or margin issues
+   Last updated: 2025-07-05
+───────────────────────────────────────────────────────────── */
+@media screen and (max-width: 768px) {
+  .brain-card-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 60px 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .brain-card-container {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+  }
+
+  .brain-card-text {
+    width: 100%;
+    font-size: 1em;
+    text-align: justify;
+    padding: 0;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .brain-card-text h2 {
+    font-size: 1.4em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007acc;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .brain-card-text p,
+  .brain-card-text ul {
+    text-align: left;
+    margin-bottom: 1em;
+  }
+
+  .brain-card-text ul {
+    padding-left: 20px;
+  }
+
+  .brain-card-animation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f3faff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.brain-card-animation svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+}

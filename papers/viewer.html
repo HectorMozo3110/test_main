@@ -1,0 +1,111 @@
+---
+layout: default
+title: Paper Viewer
+paper_viewer: true
+---
+
+<div id="paper-page" class="paper-content">
+  <p>Loading paper...</p>
+</div>
+
+<div id="bibtex-cite" style="margin-top: 40px;">
+  <h2>📚 References</h2>
+  <ul class="bibtex-rendered"></ul>
+</div>
+
+<!-- BibTeX template -->
+<template class="bibtex_template">
+  <li>
+    <span class="if author">{{author}}</span>,
+    <span class="if title"><i>"{{title}}"</i></span>,
+    <span class="if journal">{{journal}}</span>
+    <span class="if booktitle">{{booktitle}}</span>
+    <span class="if publisher">{{publisher}}</span>,
+    <span class="if year">{{year}}</span>.
+  </li>
+</template>
+
+<!-- Load dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/markdown-it-footnote@3.0.3/dist/markdown-it-footnote.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js/bibtex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" />
+
+<script>
+  const projectName = new URLSearchParams(window.location.search).get("project");
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const container = document.getElementById("paper-page");
+
+    if (!projectName) {
+      container.innerHTML = "<p>❌ Project not specified.</p>";
+      return;
+    }
+
+    const md = window.markdownit({
+      html: true,
+      linkify: true,
+      typographer: true
+    }).use(window.markdownitFootnote);
+
+    const basePath = `/papers/${projectName}/`;
+    const paperUrl = `${basePath}project_info.md`;
+
+    try {
+      let markdownText = await fetch(paperUrl).then(res => res.text());
+
+      markdownText = markdownText.replace(
+        /!\[([^\]]*)\]\(([^)]+)\)(\{[^}]+\})?/g,
+        (match, alt, src, attrs) => {
+          const fullUrl = `${basePath}${src}`;
+          let style = '';
+          if (attrs && attrs.includes("width=")) {
+            const width = attrs.match(/width=([0-9]+%?)/)?.[1];
+            if (width) {
+              style = ` style="max-width:${width}; height:auto;"`;
+            }
+          }
+          return `<img alt="${alt}" src="${fullUrl}"${style} />`;
+        }
+      );
+
+      const htmlContent = md.render(markdownText);
+      container.innerHTML = htmlContent;
+
+      renderMathInElement(container, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false }
+        ]
+      });
+
+    } catch (err) {
+      container.innerHTML = "<p>❌ Error loading project_info.md</p>";
+    }
+
+    const bibNames = ["references.bib", "paper.bib", "citations.bib"];
+    for (let bibName of bibNames) {
+      const bibUrl = `${basePath}${bibName}`;
+      try {
+        const res = await fetch(bibUrl);
+        if (!res.ok) continue;
+
+        const bibText = await res.text();
+        const script = document.createElement("script");
+        script.type = "text/bibtex";
+        script.text = bibText;
+        document.body.appendChild(script);
+
+        setTimeout(() => {
+          const bib = new Bibtex();
+          bib.render();
+        }, 300);
+        break;
+      } catch (err) {
+        console.warn("No .bib loaded:", err);
+      }
+    }
+  });
+</script>

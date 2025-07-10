@@ -1,0 +1,26 @@
+# Robots.txt for NeureonMindFlux Research Lab
+# Allow all search engines to index everything
+User-agent: *
+Disallow: /assets/
+Disallow: /node_modules/
+Disallow: /vendor/
+Disallow: /*.zip$
+Disallow: /*.tar.gz$
+Disallow: /*.exe$
+
+# Allow Markdown pages and papers
+Allow: /papers/
+Allow: /_pages/
+Allow: /index.html
+
+# Delay aggressive crawlers 
+Crawl-delay: 2
+
+# Sitemap for search engines
+Sitemap: https://neureonmindfluxlab.org/sitemap.xml
+
+# Contact
+Host: neureonmindfluxlab.org
+
+User-agent: Googlebot
+Allow: /assets/images/
