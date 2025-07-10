@@ -46,8 +46,7 @@ permalink: /
       <!-- Block: Space AI -->
       <div class="mission-block">
         <h2>
-          <img src="{{ '/assets/images/satellite_icon.png' | relative_url }}" alt="AI Space Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
-          Artificial Intelligence in Space Systems
+          🛰️ Artificial Intelligence in Space Systems
         </h2>
         <p>
           <strong>Artificial Intelligence (AI)</strong> is already playing a critical role in modern space missions and satellite-based technologies. 
@@ -64,12 +63,12 @@ permalink: /
           These applications highlight how AI enables <em>real-time decision-making</em> in environments where human latency is a limiting factor, 
           such as <strong>deep space</strong> or <strong>autonomous satellite constellations</strong>.
         </p>
+         <img src="{{ '/assets/images/satellite_icon.png' | relative_url }}" alt="AI Space Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
       </div>
       <!-- Block: Future Space AI Vision -->
       <div class="vision-block">
         <h2>
-          <img src="{{ '/assets/images/future_icon.png' | relative_url }}" alt="Future Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
-          Vision for Future AI-Driven Space Architectures
+         🌌 Vision for Future AI-Driven Space Architectures
         </h2>
         <p>
           Looking ahead, <strong>AI</strong> is expected to become a foundational component of future space architectures. 
@@ -85,6 +84,7 @@ permalink: /
           These systems will be essential to support <strong>long-duration missions</strong>, <strong>Lagrangian point observatories</strong>, and 
           <strong>planetary exploration</strong>, especially in environments where <em>communication latency</em> makes Earth-based intervention impractical.
         </p>
+         <img src="{{ '/assets/images/future_icon.png' | relative_url }}" alt="Future Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
       </div>
     </div>
   </div>
