@@ -48,6 +48,8 @@ permalink: /
         <h2>
           🛰️ Artificial Intelligence in Space Systems
         </h2>
+    <img src="{{ '/assets/images/ai_satellite_section1.png' | relative_url }}" alt="AI Space Systems" 
+     style="border-radius: 12px; width: 100%; max-width: 600px; display: block; margin: 1rem auto;" />
         <p>
           <strong>Artificial Intelligence (AI)</strong> is already playing a critical role in modern space missions and satellite-based technologies. 
           Leading agencies such as <strong>NASA</strong> and <strong>ESA</strong> have actively integrated AI into operations involving:
@@ -69,13 +71,14 @@ permalink: /
                 <li>🌐 <a href="https://www.nasa.gov/centers-and-facilities/goddard/ai-could-speed-fault-diagnosis/" target="_blank">NASA Fault Detection Systems</a></li>
                 <li>🌐 <a href="https://www.esa.int/Enabling_Support/Operations/OPS-SAT" target="_blank">ESA OPS-SAT Mission</a></li>
               </ul>
-         <img src="{{ '/assets/images/satellite_icon.png' | relative_url }}" alt="AI Space Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
       </div>
       <!-- Block: Future Space AI Vision -->
       <div class="vision-block">
         <h2>
          🌌 Vision for Future AI-Driven Space Architectures
         </h2>
+         <img src="{{ '/assets/images/ai_future_space_arch.png' | relative_url }}" alt="Future AI in Space" 
+     style="border-radius: 12px; width: 100%; max-width: 600px; display: block; margin: 1rem auto;" />
         <p>
           Looking ahead, <strong>AI</strong> is expected to become a foundational component of future space architectures. 
           Potential developments include:
@@ -97,7 +100,6 @@ permalink: /
                     <li>🌐 <a href="https://ntrs.nasa.gov/citations/20250000634" target="_blank">NASA – Deep Reinforcement Learning for Autonomous Navigation</a></li>
                     <li>🌐 <a href="https://connectivity.esa.int/projects/healthai" target="_blank">ESA TELEMAC Project – AI for Satellite Health Management</a></li>
                   </ul>
-         <img src="{{ '/assets/images/future_icon.png' | relative_url }}" alt="Future Icon" height="30" style="vertical-align: middle; margin-right: 10px;" />
       </div>
     </div>
   </div>
