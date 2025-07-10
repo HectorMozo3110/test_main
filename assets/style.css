@@ -460,33 +460,26 @@ footer {
 
 
 
-.main-nav {
-  box-shadow:
-    0 0 12px rgba(0, 255, 255, 0.3),
-    0 0 24px rgba(0, 255, 255, 0.2);
-  padding: 8px 16px;
-  border-radius: 12px;
-  background-color: rgba(255, 255, 255, 0.05); 
-}
+
+
+
 
 
 .nav-links a {
   position: relative;
-  color: #00caff;
+  color: #004080;  
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   text-shadow:
-    0 0 4px #003366,
-    0 0 10px #004466,
-    0 0 14px #00e0ff;
+    0 0 1px #007acc,
+    0 0 2px #00cfff;  
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 
 .nav-links a:hover {
-  color: #88f6ff;
+  color: #00bfff;  
   text-shadow:
-    0 0 6px #004466,
-    0 0 14px #00eaff,
-    0 0 22px #66ffff;
+    0 0 3px #0088cc,
+    0 0 6px #00eaff;
 }
