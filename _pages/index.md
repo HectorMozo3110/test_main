@@ -107,9 +107,12 @@ permalink: /
                   </div>
       </div>
       </div>
-      </div>
     </section>
-      <section class="mission-vision-section fade-up">
+
+
+
+
+   <section class="mission-vision-section fade-up">
   <div class="mission-vision-container">
     <div class="mission-vision-grid">
                 <!-- Block: Current AGI Systems -->
@@ -180,6 +183,8 @@ permalink: /
             </div>
   </div>
 </section>
+
+
   <section class="mission-vision-section fade-up">
   <div class="mission-vision-container">
     <div class="mission-vision-grid">
@@ -236,6 +241,7 @@ permalink: /
         </ul>
       </div>
     </div>
+    </div>
     </section>
 
    <section class="mission-vision-section fade-up">
@@ -270,6 +276,7 @@ permalink: /
             <li>🌐 <a href="https://www.who.int/news/item/18-01-2024-who-releases-ai-ethics-and-governance-guidance-for-large-multi-modal-models" target="_blank">WHO – AI in Healthcare and Data Ethics</a></li>
           </ul>
         </div>
+      </div>
       </div>
 </section>
 
