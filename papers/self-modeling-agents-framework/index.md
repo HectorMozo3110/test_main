@@ -223,7 +223,7 @@ The Self-Modeling Agent Framework is fully open-source and available via Zenodo 
 The system can be used in two main ways:
 
 - **Scripted Execution**  
-  Advanced users can run experiments directly through modular Python scripts (e.g., `run_single_agent.py`, `launch_multi_agent.py`). Each component—agents, self-models, meta-learners—can operate independently.
+  Advanced users can run experiments directly through modular Python scripts (e.g., `run_gridworld_experiment.py`, ` run_multi_agent_experiment.py`). Each component—agents, self-models, meta-learners—can operate independently.
 
 - **Graphical User Interface (GUI)**  
   For users who prefer a visual interface, the framework includes a dashboard that simplifies configuration and experiment execution without writing code.
@@ -236,7 +236,7 @@ The system can be used in two main ways:
 
 ### 3.4 Repository and License
 
-- **Code Repository**: [https://doi.org/10.5281/zenodo.15660166](https://doi.org/10.5281/zenodo.15660166)
+- **Code repository version v1.0.0**: [https://doi.org/10.5281/zenodo.15660166](https://doi.org/10.5281/zenodo.15660166)
 - **License**: Apache 2.0 – permitting free academic and research use.
 
 > 💡 For full deployment instructions, visual samples, and preconfigured runs, see the official documentation in the repository’s `docs/` folder and refer to the GUI interface (Section 2.5.1).
