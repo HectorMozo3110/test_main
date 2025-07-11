@@ -208,10 +208,93 @@ The meta-learner collects and analyzes data across agent runs to reveal trends a
   *Shows how the introspective meta-model converges during training.*
 
 
+## 3. Installation and Usage
+
+The Self-Modeling Agent Framework is fully open-source and available via Zenodo and GitHub. It is designed for seamless execution in both programmatic and graphical modes, offering flexibility for researchers, educators, and developers.
+
+### 3.1 Setup and Requirements
+
+- **Installation**: Clone the repository and follow the setup steps in the `README.md` file.
+- **Dependencies**: The system requires Python 3.9+ and the packages listed in `requirements.txt`.
+- **Compatibility**: Works on Linux, macOS, and Windows. GPU support is optional for accelerated training.
+
+### 3.2 Execution Modes
+
+The system can be used in two main ways:
+
+- **Scripted Execution**  
+  Advanced users can run experiments directly through modular Python scripts (e.g., `run_single_agent.py`, `launch_multi_agent.py`). Each component—agents, self-models, meta-learners—can operate independently.
+
+- **Graphical User Interface (GUI)**  
+  For users who prefer a visual interface, the framework includes a dashboard that simplifies configuration and experiment execution without writing code.
+
+### 3.3 Output and Reproducibility
+
+- **Logging**: All runs generate structured logs, internal state traces, and scientific metrics.
+- **Export Formats**: Results are saved in CSV, JSON, and visual formats for post-hoc analysis.
+- **Reproducibility**: All experiments are fully replicable using the published configurations and included datasets.
+
+### 3.4 Repository and License
+
+- **Code Repository**: [https://doi.org/10.5281/zenodo.15660166](https://doi.org/10.5281/zenodo.15660166)
+- **License**: Apache 2.0 – permitting free academic and research use.
+
+> 💡 For full deployment instructions, visual samples, and preconfigured runs, see the official documentation in the repository’s `docs/` folder and refer to the GUI interface (Section 2.5.1).
 
 
 
+## 4. Reuse Potential
 
+The Self-Modeling Agent Framework is designed with reusability, extensibility, and scientific integration in mind. Its modular architecture allows researchers and developers to incorporate individual components or the full system into diverse applications across artificial intelligence, cognitive modeling, robotics, and multi-agent systems.
+
+### 4.1 Modular Integration
+
+Each subsystem—agent core, self-monitoring logic, meta-learner, and visualization tools—can be imported and extended independently. This allows:
+
+- Integration of the self-model into existing RL agents  
+- Embedding the meta-learner into custom control architectures  
+- Reuse of visualization components for other introspective systems
+
+### 4.2 Cross-Domain Applicability
+
+The framework is not limited to a specific environment or task. Potential domains for reuse include:
+
+- **Reinforcement Learning**: Enhance agents with dynamic internal state regulation  
+- **Robotics**: Monitor and adapt real-time behaviors via introspective signals  
+- **Human-AI Interaction**: Model trust, fatigue, and confidence for explainable agents  
+- **Multi-Agent Coordination**: Explore emergent patterns from self-aware populations  
+- **AI Safety and Alignment**: Use meta-cognition to analyze misalignment scenarios
+
+### 4.3 Educational Utility
+
+The system has been successfully deployed in academic workshops and AI ethics courses. Its clear structure, real-time dashboards, and reproducible experiments make it ideal for:
+
+- Teaching introspective AI concepts  
+- Demonstrating modular software engineering in cognitive architectures  
+- Supporting student projects in adaptive agent modeling
+
+### 4.4 Scientific Experimentation
+
+The included tools support rigorous scientific inquiry:
+
+- All internal states are observable and exportable for statistical analysis  
+- Experiments can be replicated with identical parameters  
+- Outputs are compatible with popular data science and visualization pipelines (e.g., Pandas, Matplotlib, Seaborn)
+
+### 4.5 Future Extensions
+
+Researchers can build on the existing framework to:
+
+- Add new introspective variables (e.g., curiosity, risk tolerance)  
+- Swap meta-learners with transformers, GNNs, or neuro-symbolic models  
+- Integrate the system into Unity, ROS, or Web-based environments  
+- Develop ethical self-modeling simulations for alignment research
+
+---
+
+By enabling both low-level experimentation and high-level system design, the framework provides a fertile foundation for future research in self-aware AI and cognitively adaptive systems.
+
+## Related Literature
 
 [^1]: A. Sloman & R. Chrisley. *Virtual machines and consciousness*. Journal of Consciousness Studies, 10(4–5), 113–172, 2003.[https://www.researchgate.net/publication/233713911_Virtual_Machines_and_Consciousness](https://www.researchgate.net/publication/233713911_Virtual_Machines_and_Consciousness)
 
