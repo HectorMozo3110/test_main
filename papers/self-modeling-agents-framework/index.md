@@ -23,9 +23,9 @@ The Neural-Augmented Self-Modeling Agents Framework is a modular system that ena
 
 
 ## 1.Statement of Need
-As artificial intelligence systems become more autonomous and embedded in real-world environments, the ability for agents to analyze and adapt their own internal cognitive states—such as confidence, fatigue, and behavioral mode—has become essential for building resilient and trustworthy systems[^1][^2]. While theoretical models in cognitive science and AI have explored self-monitoring and introspective processes[^3][^4], practical tools that implement these capabilities remain scarce.
+As artificial intelligence systems become more autonomous and embedded in real-world environments, the ability for agents to analyze and adapt their own internal cognitive states—such as confidence, fatigue, and behavioral mode—has become essential for building resilient and trustworthy systems[^1],[^2]. While theoretical models in cognitive science and AI have explored self-monitoring and introspective processes[^3],[^4], practical tools that implement these capabilities remain scarce.
 
-Recent studies in meta-cognitive frameworks and self-organizing systems have shown that agents capable of observing and interpreting their own behavior can improve decision-making stability and adaptability[^5][^6]. However, most open-source platforms still focus on externally supervised behavior, lacking mechanisms for internal feedback and self-regulation.
+Recent studies in meta-cognitive frameworks and self-organizing systems have shown that agents capable of observing and interpreting their own behavior can improve decision-making stability and adaptability[^5],[^6]. However, most open-source platforms still focus on externally supervised behavior, lacking mechanisms for internal feedback and self-regulation.
 
 The Neural-Augmented Self-Modeling Agents Framework addresses this gap by offering a practical, modular system where agents can introspectively analyze their internal dynamics and adjust in real time. This design enables the study and deployment of agents with emergent self-awareness and adaptive autonomy across diverse environments and applications[^7].
 
@@ -145,5 +145,4 @@ These outputs provide clear insight into each agent’s internal processes and s
 
 
 
-## ⏳ Status
-> ⚙️ *This project is currently being prepared and will be updated soon. We’re actively working on its structure and content.*
+
