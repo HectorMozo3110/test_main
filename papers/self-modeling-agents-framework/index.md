@@ -15,8 +15,12 @@ permalink: /papers/self-modeling-agents-framework/
 [![GitHub](https://img.shields.io/badge/GitHub-HectorMozo3110-181717?logo=github)](https://github.com/HectorMozo3110)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-hector--mozo--462899312-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hector-mozo-462899312/)
 
-📧 Institutional email: [HectorMozo@my.uopeople.edu](mailto:HectorMozo@my.uopeople.edu)  
-Affiliation: Department of Computer Science, University of the People, California, USA
+**Affiliations:**  
+- Department of Computer Science, University of the People, California, USA  
+- NeureonMindFlux Research Lab 
+
+**University Email:** [HectorMozo@my.uopeople.edu](mailto:HectorMozo@my.uopeople.edu)  
+**Institutional Email:** [hector.mozo@neureonmindflux.org](mailto:contact@neureonmindflux.org)
 
 ## Abstract {#abstract}
 The Neural-Augmented Self-Modeling Agents Framework is a modular system that enables artificial agents to analyze and adapt their own internal cognitive states in real time. It uses neural models to monitor variables such as confidence, fatigue, and behavioral mode, and employs a meta-learner to interpret these signals and support introspective adjustments. Designed for both single-agent and multi-agent environments, the framework helps agents improve behavioral stability, manage exploration-exploitation balance, and exhibit measurable forms of self-awareness. It includes tools for scientific visualization, reproducible metrics, and flexible configuration, offering a practical platform for research in meta-cognitive AI and adaptive intelligent systems.

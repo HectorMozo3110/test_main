@@ -16,8 +16,14 @@ permalink: /papers/BB84-Quantum-Encryption-Tool-Simulator/
 [![GitHub](https://img.shields.io/badge/GitHub-HectorMozo3110-181717?logo=github)](https://github.com/HectorMozo3110)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-hector--mozo--462899312-0077B5?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hector-mozo-462899312/)
 
-📧 Institutional email: [HectorMozo@my.uopeople.edu](mailto:HectorMozo@my.uopeople.edu)  
-Affiliation: Department of Computer Science, University of the People, California, USA
+ 
+**Affiliations:**  
+- Department of Computer Science, University of the People, California, USA  
+- NeureonMindFlux Research Lab 
+
+**University Email:** [HectorMozo@my.uopeople.edu](mailto:HectorMozo@my.uopeople.edu)  
+**Institutional Email:** [hector.mozo@neureonmindflux.org](mailto:contact@neureonmindflux.org)
+
 
 ## Abstract {#abstract}
 
