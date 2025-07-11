@@ -105,7 +105,6 @@ By participating in this lab, you commit to:
 
 Together, we are not only creating systems of intelligence — we are shaping the culture around how intelligence is created, shared, and governed.
 
-Thank you for being part of this mission.
 
 ---
 
