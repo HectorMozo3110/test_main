@@ -120,7 +120,92 @@ These outputs provide clear insight into each agent’s internal processes and s
 
 
 
+#### 2.5.1 Dashboard and GUI Controller
 
+The framework includes an optional graphical user interface (GUI) that serves as a control console for running experiments, selecting configurations, executing the meta-learner, and visualizing results—**without requiring direct interaction with the codebase**. While every core module can operate independently through scripts, the GUI provides a unified and user-friendly interface for streamlined experimentation.
+
+Key capabilities include:
+
+- **Single-Agent Experiment Execution**  
+  - Select between Simple or Advanced Self-Model variants  
+  - Choose policy types (Dummy, Hybrid, or RL-based)  
+  - Launch gridworld experiments and generate outputs
+
+- **Multi-Agent Experiment Launcher**  
+  - Define the number of agents and configurations  
+  - Execute synchronized introspective agents in parallel  
+  - Compare adaptive behavior across populations
+
+- **Meta-Learner Module Integration**  
+  - Aggregate internal metrics across runs  
+  - Visualize confidence calibration and behavioral shifts
+
+- **Scientific Visualizers**  
+  - Multi-agent visual dashboards (confidence and fatigue dynamics)  
+  - Self-model deep introspection per configuration
+
+Although the GUI is not required, it significantly simplifies access for researchers and educators. All modules remain fully functional as standalone components in the code, ensuring reproducibility and flexibility for advanced users.
+
+![Graphical User Interface of the Self-Modeling Agent System](figures/gui_dashboard.png)
+
+**Figure 6. Optional GUI Controller**  
+*The GUI enables graphical control over experiments, self-modeling settings, and introspective analytics. It complements but does not replace the programmatic modular structure of the system.*
+
+
+
+#### 2.5.2 Visual Output Samples
+
+To support deep scientific analysis and transparent introspection, the system exports high-resolution visualizations of internal agent processes, meta-learner metrics, and population-wide behavioral dynamics. These outputs are suitable for inclusion in publications, dashboards, or further computational analysis.
+
+#### Introspective State Evolution
+
+This visualization shows the time evolution of internal variables (`confidence`, `fatigue`, and `behavioral_mode`) for a self-modeling agent.
+
+![Self-Model Evolution (Advanced Policy)](figures/self_model_evolution_advanced_advanced.png)  
+**Figure 7. Internal cognitive state evolution of an advanced self-model agent.**  
+*The timeline captures fine-grained dynamics of internal states as the agent interacts with its environment.*
+
+####  Multi-Agent Cognitive Dynamics
+
+In multi-agent experiments, the system can compare behavioral dynamics across agents. The figure below shows agent modes over time.
+
+![Multi-Agent Mode Over Time](figures/multi_agent_agent_mode_over_time.png)  
+**Figure 8. Mode switching across agents in a synchronized gridworld environment.**  
+*Each line represents an agent’s dominant behavioral mode over time, revealing emergent divergence or synchronization.*
+
+#### Meta-Learner Insight Aggregation
+
+The meta-learner collects and analyzes data across agent runs to reveal trends and adjust introspective recommendations. Several perspectives are provided:
+
+- **Agent-Level Comparison**
+
+  ![Meta-Learner Agents Comparison](figures/meta_learner_agents_comparison.png)  
+  **Figure 9. Cross-agent introspective metrics comparison.**  
+  *Displays how introspective variables differ between agents under identical conditions.*
+
+- **Faceted View by Configuration**
+
+  ![Meta-Learner Faceted View](figures/meta_learner_agents_faceted.png)  
+  **Figure 10. Behavioral dynamics across agent configurations.**  
+  *Breakdown of internal state transitions categorized by policy or self-model type.*
+
+- **Mean & Std Confidence Trends**
+
+  ![Meta-Learner Mean & Std](figures/meta_learner_agents_mean_std.png)  
+  **Figure 11. Confidence and fatigue trend analysis with statistical overlays.**  
+  *Highlights overall trends and variability across the entire agent population.*
+
+- **Final Agent Metrics Overview**
+
+  ![Meta-Learner Final Agent Stats](figures/meta_learner_last_agent_metrics.png)  
+  **Figure 12. Final internal metrics per agent.**  
+  *Bar plots showing summary statistics at the end of each episode for all agents.*
+
+- **Training Loss Convergence**
+
+  ![Meta-Learner Loss](figures/meta_learner_training_loss.png)  
+  **Figure 13. Meta-learner training loss curve.**  
+  *Shows how the introspective meta-model converges during training.*
 
 
 
