@@ -80,7 +80,7 @@ This includes participation in both online and physical spaces.
 
 We take all violations seriously. If you witness or experience conduct that goes against this Code, please report it confidentially to:
 
-📧 **conduct@neureonmindfluxlab.org**
+📩 Email us: [contact@neureonmindflux.org](mailto:contact@neureonmindflux.org) 
 
 All reports will be reviewed promptly and treated with discretion. Potential outcomes may include (depending on the severity):
 
