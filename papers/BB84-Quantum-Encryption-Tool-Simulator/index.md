@@ -21,8 +21,8 @@ permalink: /papers/BB84-Quantum-Encryption-Tool-Simulator/
 - Department of Computer Science, University of the People, California, USA  
 - NeureonMindFlux Research Lab 
 
-**University Email:** [HectorMozo@my.uopeople.edu](mailto:HectorMozo@my.uopeople.edu)  
-**Institutional Email:** [hector.mozo@neureonmindflux.org](mailto:contact@neureonmindflux.org)
+📧 **University Email:** [HectorMozo@my.uopeople.edu](mailto:HectorMozo@my.uopeople.edu)  
+📧 **Institutional Email:** [hector.mozo@neureonmindflux.org](mailto:contact@neureonmindflux.org)
 
 
 ## Abstract {#abstract}
